@@ -1,0 +1,14 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+    paths:
+        - app
+
+    # Start reasonable; we can ratchet up later
+    level: 5
+
+    # Optional: avoid analyzing generated/noisy paths
+    excludePaths:
+        - storage
+        - bootstrap/cache

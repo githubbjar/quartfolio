@@ -1,0 +1,1 @@
+<p class="text-l text-black">TOOLS: {{  $slot }}</p>

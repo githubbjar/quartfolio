@@ -1,0 +1,55 @@
+.hero {
+    background-image: url('../images/homepage/header.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.footer {
+    background-image: url('../images/homepage/footer.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.graphics-bg {
+    background-image: url('../images/homepage/graphics-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.web-dev-bg {
+    background-image: url('../images/homepage/web-dev-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.blast-bg {
+    background-image: url('../images/homepage/blast-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@layer utilities {
+    .clip-diagonal {
+        clip-path: polygon(0 0, 100% 100%, 100% 0, 0 0);
+    }
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
