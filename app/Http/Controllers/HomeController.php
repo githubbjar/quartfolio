@@ -10,13 +10,13 @@ class HomeController extends Controller
     {
         return view('quartfolio', [
 
-            'covers' => Project::where('type', 'cover')
-                ->where('is_featured', true)
+            'covers' => Project::type('cover')
+                ->featured()
                 ->latest()
                 ->take(4)
                 ->get(),
 
-            'coverCount' => Project::where('type', 'cover')->count(),
+            'coverCount' => Project::type('cover')->count(),
 
             'layouts' => Project::where('type', 'layout')
                 ->where('is_featured', true)

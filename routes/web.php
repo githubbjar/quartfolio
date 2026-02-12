@@ -88,3 +88,6 @@ Route::post('/admin/logout', [AdminAuthController::class, 'logout'])
 Route::get('/appy', function () {
     return view('appy');
 });
+
+Route::get('/health', fn () => 'ok');
+
