@@ -26,9 +26,8 @@ test('homepage loads and includes expected project data', function () {
 
     // Assert featured covers passed to view
     $response->assertViewHas('covers', function ($covers) {
-    return $covers->count() === 4
-        && $covers->every(fn ($p) => $p->type === 'cover' && (bool) $p->is_featured === true);
-});
-
+        return $covers->count() === 4
+            && $covers->every(fn ($p) => $p->type === 'cover' && (bool) $p->is_featured === true);
+    });
 
 });

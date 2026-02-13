@@ -2,8 +2,8 @@
 
 use App\Models\Project;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use function Pest\Laravel\delete;
 
+use function Pest\Laravel\delete;
 
 uses(RefreshDatabase::class);
 
