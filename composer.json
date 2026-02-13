@@ -75,12 +75,21 @@
         "pre-package-uninstall": [
             "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
         ]
+
     },
+
+    "scripts": {
+      "pint": "pint",
+      "test": "php artisan test",
+      "analyse": "phpstan analyse --memory-limit=512M"
+    },
+
     "extra": {
         "laravel": {
             "dont-discover": []
         }
     },
+
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
@@ -92,4 +101,13 @@
     },
     "minimum-stability": "stable",
     "prefer-stable": true
+
+
+
+
+
+
+
+
 }
+
