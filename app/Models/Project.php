@@ -2,12 +2,11 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
-
     use HasFactory;
 
     public function scopeType($query, string $type)
@@ -19,7 +18,6 @@ class Project extends Model
     {
         return $query->where('is_featured', true);
     }
-
 
     public function getRouteKeyName()
     {

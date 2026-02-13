@@ -90,4 +90,3 @@ Route::get('/appy', function () {
 });
 
 Route::get('/health', fn () => 'ok');
-
