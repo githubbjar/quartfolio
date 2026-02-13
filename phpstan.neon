@@ -1,14 +1,7 @@
 includes:
-    - vendor/larastan/larastan/extension.neon
+    - vendor/nunomaduro/larastan/extension.neon
 
 parameters:
+    level: 1
     paths:
         - app
-
-    # Start reasonable; we can ratchet up later
-    level: 5
-
-    # Optional: avoid analyzing generated/noisy paths
-    excludePaths:
-        - storage
-        - bootstrap/cache
