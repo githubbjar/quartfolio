@@ -50,3 +50,6 @@ composer analyse  # static analysis (Larastan / PHPStan)
 
 # Build assets
 npm run build
+
+## Static Analysis
+Larastan is configured via `phpstan.neon`.
