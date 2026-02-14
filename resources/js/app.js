@@ -1,17 +1,17 @@
 import './bootstrap'
 
-// ALPINE JS / AOS / SWIPER
-
+//Alpine.js - JavaScript framework for interactivity
 import Alpine from "alpinejs";
 window.Alpine = Alpine;
 
+//AOS - Animate On Scroll Library
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import Swiper from "swiper";
-import { Navigation, Autoplay } from "swiper/modules";
+//Swiper - Carousel Library
 import "swiper/css";
 import "swiper/css/navigation";
+
 
 //swiper init for website slider
 import { initWebsiteSlider } from './sliders/websiteSlider'
@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initWebsiteSlider()
 })
 
+
+// Slider components (self-initializing or DOM-ready safe)
 import './sliders/testimonialSlider';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -36,52 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-
-
-
-function initCarousels() {
-  document.querySelectorAll(".carousel").forEach((el) => {
-    if (el.swiper) return; // prevent double init
-
-    const wrap = el.closest(".carousel-wrap");
-
-    new Swiper(el, {
-      modules: [Navigation, Autoplay],
-      slidesPerView: "auto",
-      grabCursor: true,
-      loop: true,
-      centeredSlides: true,
-      initialSlide: 1,
-      spaceBetween: 24,
-      autoplay: {
-        delay: 7000,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: wrap.querySelector(".carousel-next"),
-        prevEl: wrap.querySelector(".carousel-prev"),
-      },
-    });
-  });
-}
+// resources/js/app.js
+import { initCarousels } from "./components/carousels";
 
 document.addEventListener("DOMContentLoaded", initCarousels);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Start Alpine AFTER registering components
 Alpine.start();

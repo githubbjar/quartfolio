@@ -1,10 +1,18 @@
-function initCarousels() {
-  document.querySelectorAll(".carousel").forEach((el) => {
-    if (el.swiper) return;
+// resources/js/components/carousels.js
+import Swiper from "swiper";
+import { Navigation, Autoplay } from "swiper/modules";
 
-    const wrap = el.closest(".carousel-wrap");
+export function initCarousels() {
+  document.querySelectorAll(".carousel").forEach((carousel) => {
+    if (carousel.swiper) return;
 
-    new Swiper(el, {
+    const wrap = carousel.closest(".carousel-wrap");
+    if (!wrap) return;
+
+    const nextEl = wrap.querySelector(".carousel-next");
+    const prevEl = wrap.querySelector(".carousel-prev");
+
+    new Swiper(carousel, {
       modules: [Navigation, Autoplay],
       slidesPerView: "auto",
       grabCursor: true,
@@ -16,10 +24,7 @@ function initCarousels() {
         delay: 7000,
         disableOnInteraction: false,
       },
-      navigation: {
-        nextEl: wrap.querySelector(".carousel-next"),
-        prevEl: wrap.querySelector(".carousel-prev"),
-      },
+      navigation: { nextEl, prevEl },
     });
   });
 }
