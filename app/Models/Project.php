@@ -28,7 +28,8 @@ class Project extends Model
         'title',
         'slug',
         'type',
-        'date',
+        'year',
+        'quarter',
         'description',
         'is_featured',
     ];

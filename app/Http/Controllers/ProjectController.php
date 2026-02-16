@@ -88,7 +88,8 @@ class ProjectController extends Controller
             'title' => 'required|string|max:255',
             'slug' => 'nullable|string|max:255|unique:projects,slug',
             'type' => 'required|string|max:50',
-            'date' => 'nullable|string',
+            'year' => ['required', 'integer', 'between:1900,' . (now()->year + 1)],
+            'quarter' => ['required', 'integer', 'between:1,4'],
             'description' => 'nullable|string',
             'is_featured' => 'boolean',
         ]);

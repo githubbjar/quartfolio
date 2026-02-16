@@ -56,16 +56,37 @@
                 </select>
             </div>
 
-            {{-- Date --}}
-            <div>
-                <label class="block font-semibold mb-1">Date</label>
-                <input
-                    type="text"
-                    name="date"
-                    value="{{ old('date') }}"
-                    class="w-full border rounded px-3 py-2"
-                    placeholder="Spring 2025"
-                >
+            <div class="grid grid-cols-2 gap-4">
+                {{-- Year --}}
+                <div>
+                    <label class="block font-semibold mb-1">Year</label>
+                    <input
+                        type="number"
+                        name="year"
+                        value="{{ old('year') }}"
+                        class="w-full border rounded px-3 py-2"
+                        placeholder="2026"
+                        min="1900"
+                        max="{{ now()->year + 1 }}"
+                        required
+                    >
+                </div>
+
+                {{-- Quarter --}}
+                <div>
+                    <label class="block font-semibold mb-1">Season</label>
+                    <select
+                        name="quarter"
+                        class="w-full border rounded px-3 py-2"
+                        required
+                    >
+                        <option value="">Select season</option>
+                        <option value="1" @selected(old('quarter') == 1)>Winter</option>
+                        <option value="2" @selected(old('quarter') == 2)>Spring</option>
+                        <option value="3" @selected(old('quarter') == 3)>Summer</option>
+                        <option value="4" @selected(old('quarter') == 4)>Fall</option>
+                    </select>
+                </div>
             </div>
 
 
