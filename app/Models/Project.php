@@ -37,4 +37,16 @@ class Project extends Model
     protected $casts = [
         'is_featured' => 'boolean',
     ];
+
+    public function getQuarterLabelAttribute(): string
+    {
+        return match ($this->quarter) {
+            1 => 'Spring',
+            2 => 'Summer',
+            3 => 'Fall',
+            4 => 'Winter',
+            default => '',
+        };
+    }
+
 }
