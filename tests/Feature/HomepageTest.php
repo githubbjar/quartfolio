@@ -8,7 +8,7 @@ uses(RefreshDatabase::class);
 test('homepage loads and includes expected project data', function () {
 
     // 4 featured covers should appear on homepage
-    Project::factory()->count(4)->create([
+    Project::factory()->count(6)->create([
         'type' => 'cover',
         'is_featured' => true,
     ]);
@@ -26,7 +26,7 @@ test('homepage loads and includes expected project data', function () {
 
     // Assert featured covers passed to view
     $response->assertViewHas('covers', function ($covers) {
-        return $covers->count() === 4
+        return $covers->count() === 3
             && $covers->every(fn ($p) => $p->type === 'cover' && (bool) $p->is_featured === true);
     });
 

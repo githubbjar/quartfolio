@@ -13,7 +13,7 @@ class HomeController extends Controller
             'covers' => Project::type('cover')
                 ->featured()
                 ->latest()
-                ->take(4)
+                ->take(3)
                 ->get(),
 
             'coverCount' => Project::type('cover')->count(),

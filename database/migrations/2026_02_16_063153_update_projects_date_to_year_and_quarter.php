@@ -16,7 +16,7 @@ return new class extends Migration
 
             $table->index(['year', 'quarter']);
         });
-}
+    }
 
     public function down(): void
     {

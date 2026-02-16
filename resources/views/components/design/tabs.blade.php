@@ -39,20 +39,22 @@
                 
                 
                 <!-- Covers DIM: lg. 1000x1305; sm. 500x653-->
-                <div x-show="['1'].includes(category)" class="grid lg:grid-cols-4 md:grid-cols-2 gap-6 justify-items-center">    
+                <div
+                    x-show="['1'].includes(category)"
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                    >
                     @foreach ($covers as $cover)
-                        @php
-                            $imagePath = "images/covers/{$cover->slug}_sm.webp";
-                        @endphp
-                        <div x-show="['1'].includes(category)">
-                            <div class="relative">                                    
-                                <a href="/cover/{{ $cover->slug }}">
-                                    <img src="{{ asset($imagePath) }}" alt="{{ $cover->title }}">
-                                </a>
-                            </div>
+                        @php $imagePath = "images/covers/{$cover->slug}_sm.webp"; @endphp
+
+                        <div @class(['hidden lg:block' => $loop->index === 2])>
+                        <a href="/cover/{{ $cover->slug }}" class="block w-full">
+                            <img class="block w-full h-auto" src="{{ asset($imagePath) }}" alt="{{ $cover->title }}">
+                        </a>
                         </div>
                     @endforeach
                 </div>
+
+
 
                 <!-- Layouts -->
                 <div x-show="['2'].includes(category)" class="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto justify-items-center">    
