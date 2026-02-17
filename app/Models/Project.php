@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
+
 
 class Project extends Model
 {
@@ -48,5 +50,29 @@ class Project extends Model
             default => '',
         };
     }
+
+
+
+public function getHeroUrlAttribute(): ?string
+    {
+        if ($this->hero_path) {
+            return Storage::url($this->hero_path);
+        }
+
+        // Temporary fallback during migration
+        return asset("images/covers/{$this->slug}.webp");
+    }
+
+public function getThumbUrlAttribute(): ?string
+    {
+        if ($this->thumb_path) {
+            return Storage::url($this->thumb_path);
+        }
+
+        // Optional fallback (or null)
+        return asset("images/covers/{$this->slug}.webp");
+    }
+
+
 
 }

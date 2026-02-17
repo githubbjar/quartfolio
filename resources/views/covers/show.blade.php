@@ -6,19 +6,16 @@
 
         <div
             class="max-w-sm mx-auto md:max-w-3xl lg:-mt-32 md:-mt-26 -mt-36
-                    opacity-0 scale-95
-                    animate-[fadeScale_0.6s_ease-out_0.2s_forwards]"
-            >
-                <div class="grid grid-cols-1 gap-6">
-                    @php
-                        $imagePath = "images/covers/{$project->slug}.webp";
-                    @endphp
-                    <img
-                        src="{{ asset($imagePath) }}"
-                        alt="{{ $project->title }}"
-                        class="w-full h-auto"
-                    >
-                </div>
+                opacity-0 scale-95
+                animate-[fadeScale_0.6s_ease-out_0.2s_forwards]"
+        >
+            <div class="grid grid-cols-1 gap-6">
+                <img
+                    src="{{ $project->hero_url }}"
+                    alt="{{ $project->title }}"
+                    class="w-full h-auto"
+                >
+            </div>
         </div>
 
         
