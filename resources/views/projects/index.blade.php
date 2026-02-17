@@ -31,7 +31,7 @@
                     <tr>
                         <th class="px-4 py-3 text-sm font-semibold text-center uppercase">Featured</th>
                         <th class="px-4 py-3 text-sm font-semibold uppercase">Title</th>
-                        <th class="px-4 py-3 text-sm font-semibold uppercase">Print Date</th>
+                        <th class="px-4 py-3 text-sm font-semibold uppercase">Project Date</th>
                         <th class="px-4 py-3 text-sm font-semibold uppercase">Type</th>
 
                         <th class="px-4 py-3 text-sm font-semibold text-center uppercase">Scrap</th>
@@ -62,7 +62,7 @@
                             </td>
 
                             <td class="px-4 py-3 text-sm">
-                                {{ $project->date }}
+                                {{ $project->quarter_label }} {{ $project->year }}
                             </td>
 
                             <td class="px-4 py-3 capitalize">
