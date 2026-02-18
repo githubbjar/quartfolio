@@ -7,6 +7,31 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+
+# Quartfolio
+
+This repository contains the source code for my personal portfolio site, built with Laravel.
+
+## Why Laravel?
+
+This site is intentionally built with Laravel rather than a traditional CMS. Laravel allows me to define the data model, routing, and rendering logic explicitly, without relying on plugin-driven abstractions. That gives me full control over structure, performance, and long-term maintainability as the site evolves.
+
+I chose Laravel because it reflects how I design and maintain production applications: with clear domain modeling, predictable behavior, and a codebase I fully understand and own.
+
+## Architecture Notes
+
+- Projects are modeled explicitly in the database (rather than CMS post types)
+- Images are referenced via storage-backed paths for future flexibility
+- The codebase is structured to support testing, refactoring, and incremental growth
+- Admin tooling is intentionally minimal and purpose-built
+
+## Status
+
+This is an actively evolving project and serves both as a portfolio and as a living codebase that reflects my current development practices.
+
+
+
+
 ## AI / Production Setup Checklist
 
 - [ ] VS Code extensions
