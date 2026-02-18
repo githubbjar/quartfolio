@@ -84,27 +84,43 @@ class ProjectController extends Controller
 
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'title' => 'required|string|max:255',
-            'slug' => 'nullable|string|max:255|unique:projects,slug',
-            'type' => 'required|string|max:50',
-            'year' => ['required', 'integer', 'between:1900,'.(now()->year + 1)],
+        $data = $request->validate([
+            'title' => ['required', 'string', 'max:255'],
+            'type' => ['required', 'string', 'max:50'],
+            'year' => ['required', 'integer', 'between:1900,' . (now()->year + 1)],
             'quarter' => ['required', 'integer', 'between:1,4'],
-            'description' => 'nullable|string',
-            'is_featured' => 'boolean',
+            'description' => ['nullable', 'string'],
+            'is_featured' => ['nullable', 'boolean'],
         ]);
 
-        $validated['slug'] = $validated['slug']
-            ?? Str::slug($validated['title']);
+        // checkbox safety
+        $data['is_featured'] = (bool) $request->input('is_featured', false);
 
-        $validated['is_featured'] = $request->boolean('is_featured');
+        // Create a base slug from title
+        $baseSlug = Str::slug($data['title']);
 
-        Project::create($validated);
+        // Ensure uniqueness (salvo-issue-76, salvo-issue-76-2, etc.)
+        $slug = $baseSlug;
+        $i = 2;
+        while (Project::where('slug', $slug)->exists()) {
+            $slug = "{$baseSlug}-{$i}";
+            $i++;
+        }
+
+        $data['slug'] = $slug;
+
+        // Auto-generate image paths (served via public/storage after storage:link)
+        // Files should live at: storage/app/public/projects/{slug}-hero.webp and -thumb.webp
+        $data['hero_path']  = "storage/projects/{$slug}-hero.webp";
+        $data['thumb_path'] = "storage/projects/{$slug}-thumb.webp";
+
+        Project::create($data);
 
         return redirect()
             ->route('projects.index')
-            ->with('success', 'Project created successfully.');
+            ->with('status', 'Project created.');
     }
+
 
     public function toggleFeatured(Project $project)
     {

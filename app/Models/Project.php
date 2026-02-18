@@ -34,6 +34,8 @@ class Project extends Model
         'quarter',
         'description',
         'is_featured',
+        'hero_path',
+        'thumb_path',
     ];
 
     protected $casts = [
