@@ -15,13 +15,10 @@
         <div class="swiper-wrapper">
 
             @foreach($websites as $website)
-                @php
-                    $imagePathWebsite = "images/websites/{$website->slug}.webp";
-                @endphp
 
                 <div class="swiper-slide max-w-lg">
                     <img 
-                        src="{{ asset($imagePathWebsite) }}" 
+                        src="{{ asset($website->thumb_path) }}" 
                         width="540" 
                         height="460" 
                         alt="{{ $website->title }}"
