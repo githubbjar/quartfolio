@@ -90,7 +90,7 @@ class ProjectController extends Controller
         $data = $request->validate([
             'title' => ['required', 'string', 'max:255'],
             'type' => ['required', 'string', 'max:50'],
-            'year' => ['required', 'integer', 'between:1900,' . (now()->year + 1)],
+            'year' => ['required', 'integer', 'between:1900,'.(now()->year + 1)],
             'quarter' => ['required', 'integer', 'between:1,4'],
             'description' => ['nullable', 'string'],
             'is_featured' => ['nullable', 'boolean'],
@@ -114,7 +114,7 @@ class ProjectController extends Controller
 
         // Auto-generate image paths (served via public/storage after storage:link)
         // Files should live at: storage/app/public/projects/{slug}-hero.webp and -thumb.webp
-        $data['hero_path']  = "storage/projects/{$slug}-hero.webp";
+        $data['hero_path'] = "storage/projects/{$slug}-hero.webp";
         $data['thumb_path'] = "storage/projects/{$slug}-thumb.webp";
 
         Project::create($data);
@@ -123,7 +123,6 @@ class ProjectController extends Controller
             ->route('projects.index')
             ->with('status', 'Project created.');
     }
-
 
     public function toggleFeatured(Project $project)
     {

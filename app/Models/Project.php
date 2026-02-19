@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 
-
 class Project extends Model
 {
     use HasFactory;
@@ -53,9 +52,7 @@ class Project extends Model
         };
     }
 
-
-
-public function getHeroUrlAttribute(): ?string
+    public function getHeroUrlAttribute(): ?string
     {
         if ($this->hero_path) {
             return Storage::url($this->hero_path);
@@ -65,7 +62,7 @@ public function getHeroUrlAttribute(): ?string
         return asset("images/covers/{$this->slug}.webp");
     }
 
-public function getThumbUrlAttribute(): ?string
+    public function getThumbUrlAttribute(): ?string
     {
         if ($this->thumb_path) {
             return Storage::url($this->thumb_path);
@@ -74,7 +71,4 @@ public function getThumbUrlAttribute(): ?string
         // Optional fallback (or null)
         return asset("images/covers/{$this->slug}.webp");
     }
-
-
-
 }

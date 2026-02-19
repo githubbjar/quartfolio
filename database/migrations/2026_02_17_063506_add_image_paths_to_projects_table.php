@@ -20,5 +20,4 @@ return new class extends Migration
             $table->dropColumn(['hero_path', 'thumb_path']);
         });
     }
-    
 };
