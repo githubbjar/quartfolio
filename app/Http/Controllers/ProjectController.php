@@ -37,7 +37,10 @@ class ProjectController extends Controller
 
     public function projectsIndex()
     {
-        $projects = Project::orderBy('type', 'asc')->paginate(10);
+        $projects = Project::orderBy('type', 'asc')
+            ->orderBy('year', 'desc')      // newest year first
+            ->orderBy('quarter', 'desc')   // newest quarter first
+            ->paginate(10);
 
         return view('projects.index', compact('projects'));
 

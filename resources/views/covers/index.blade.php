@@ -13,13 +13,10 @@
             <div class="grid md:grid-cols-3 gap-6">
                 
                 @foreach ($covers as $cover)
-                    @php
-                        $imagePath = "images/covers/{$cover->slug}.webp";
-                    @endphp
                     <div x-show="['1'].includes(category)">
                         <div class="relative">                                    
                             <a href="/cover/{{ $cover->slug }}">
-                                <img src="{{ asset($imagePath) }}" alt="{{ $cover->title }}">
+                                <img src="{{ asset($cover->thumb_path) }}" alt="{{ $cover->title }}">
                             </a>
                         </div>
                     </div>

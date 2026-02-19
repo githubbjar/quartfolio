@@ -44,12 +44,10 @@
                     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
                     >
                     @foreach ($covers as $cover)
-                        @php $imagePath = "images/covers/{$cover->slug}_sm.webp"; @endphp
-
                         <div @class(['hidden lg:block' => $loop->index === 2])>
-                        <a href="/cover/{{ $cover->slug }}" class="block w-full">
-                            <img class="block w-full h-auto" src="{{ asset($imagePath) }}" alt="{{ $cover->title }}">
-                        </a>
+                            <a href="/cover/{{ $cover->slug }}" class="block w-full">
+                                <img class="block w-full h-auto" src="{{ asset($cover->thumb_path) }}" alt="{{ $cover->title }}">
+                            </a>
                         </div>
                     @endforeach
                 </div>
