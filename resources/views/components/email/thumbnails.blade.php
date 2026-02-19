@@ -12,7 +12,7 @@
             <a href="{{ $eblast->description }}" target="_blank">
                 <div class="h-124 overflow-hidden hover:overflow-y-auto">
                     <img
-                        src="{{ asset($imagePathEblast) }}"
+                        src="{{ asset($eblast->thumb_path) }}"
                         alt=""
                         class="w-full"
                     />
