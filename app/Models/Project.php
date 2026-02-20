@@ -35,6 +35,7 @@ class Project extends Model
         'is_featured',
         'hero_path',
         'thumb_path',
+        'external_url',
     ];
 
     protected $casts = [

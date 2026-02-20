@@ -100,6 +100,21 @@
                 >{{ old('description') }}</textarea>
             </div>
 
+            {{-- External URL (for websites & eblasts only) --}}
+            <div>
+                <label class="block font-semibold mb-1">External URL</label>
+                <input
+                    type="url"
+                    name="external_url"
+                    value="{{ old('external_url') }}"
+                    class="w-full border rounded px-3 py-2"
+                    placeholder="https://example.com"
+                >
+                <p class="text-sm text-gray-500 mt-1">
+                    Only required for Website and Eblast projects.
+                </p>
+            </div>
+
             {{-- Featured --}}
             <div class="flex items-center gap-2">
                 <input type="hidden" name="is_featured" value="0">

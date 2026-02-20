@@ -94,6 +94,7 @@ class ProjectController extends Controller
             'quarter' => ['required', 'integer', 'between:1,4'],
             'description' => ['nullable', 'string'],
             'is_featured' => ['nullable', 'boolean'],
+            'external_url' => ['nullable', 'url'],
         ]);
 
         // checkbox safety

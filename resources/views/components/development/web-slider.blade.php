@@ -28,7 +28,7 @@
                         <div class="absolute bottom-0 right-0 p-6">
                             <a
                                 class="text-xs font-bold text-white py-2 px-3 rounded-full bg-gray-900 hover:bg-gray-900/50 transition"
-                                href="{{ $website->description }}"
+                                href="{{ $website->external_url }}"
                                 target="_blank"
                             >
                                 {{ $website->title }}
