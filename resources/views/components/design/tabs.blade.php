@@ -57,13 +57,10 @@
                 <!-- Layouts -->
                 <div x-show="['2'].includes(category)" class="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto justify-items-center">    
                     @foreach ($layouts as $layout)
-                        @php
-                            $imagePathLayout = "images/layouts/{$layout->slug}_sm.webp";
-                        @endphp
                         <div x-show="['2'].includes(category)">
                             <div class="relative">                                    
                                 <a href="/layout/{{ $layout->slug }}">
-                                    <img src="{{ asset($imagePathLayout) }}" alt="{{ $layout->title }}">
+                                    <img src="{{ asset($layout->thumb_path) }}" alt="{{ $layout->title }}">
                                 </a>
                             </div>
                         </div>
