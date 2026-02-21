@@ -149,8 +149,6 @@
     <!-- Page content -->
     <main class="grow">
 
-        
-
     {{ $slot }}
 
     </main>

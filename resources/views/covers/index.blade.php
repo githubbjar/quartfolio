@@ -15,7 +15,7 @@
                 @foreach ($covers as $cover)
                     <div x-show="['1'].includes(category)">
                         <div class="relative">                                    
-                            <a href="/cover/{{ $cover->slug }}">
+                            <a href="/covers/{{ $cover->slug }}">
                                 <img src="{{ asset($cover->thumb_path) }}" alt="{{ $cover->title }}">
                             </a>
                         </div>

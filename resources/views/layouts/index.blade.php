@@ -15,7 +15,7 @@
                 @foreach ($layouts as $layout)
                     <div x-show="['1'].includes(category)">
                         <div class="relative">                                    
-                            <a href="/layout/{{ $layout->slug }}">
+                            <a href="/layouts/{{ $layout->slug }}">
                                 <img src="{{ asset($layout->thumb_path) }}" alt="{{ $layout->title }}">
                             </a>
                         </div>

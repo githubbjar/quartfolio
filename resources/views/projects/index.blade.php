@@ -70,7 +70,7 @@
                             </td>
 
                             <td class="px-4 py-3 text-center space-x-2">
-                                <form action="{{ route('project.destroy', $project->slug) }}"
+                                <form action="{{ route('projects.destroy', $project->slug) }}"
                                     method="POST"
                                     onsubmit="return confirm('Delete this project?')"
                                     class="inline">

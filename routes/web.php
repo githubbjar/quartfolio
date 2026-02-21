@@ -14,13 +14,13 @@ Route::controller(ProjectController::class)->group(function () {
     // show covers -- frontend
     Route::get('/covers', 'coversIndex')
         ->name('covers.index');
-    Route::get('/cover/{project:slug}', 'coverShow')
+    Route::get('/covers/{project:slug}', 'coverShow')
         ->name('cover.show');
 
     // show layouts -- frontend
     Route::get('/layouts', 'layoutsIndex')
         ->name('layouts.index');
-    Route::get('/layout/{project:slug}', 'layoutShow')
+    Route::get('/layouts/{project:slug}', 'layoutShow')
         ->name('layout.show');
 
     // show eblasts -- frontend
@@ -39,7 +39,7 @@ Route::controller(ProjectController::class)->group(function () {
 
     // delete a project -- backend
     Route::delete('/projects/{project}', 'destroy')
-        ->name('project.destroy');
+        ->name('projects.destroy');
 
     // toggle "is_featured" -- backend
     Route::patch('/projects/{project}/toggle-featured', 'toggleFeatured')
@@ -54,7 +54,7 @@ Route::controller(MessageController::class)->group(function () {
         ->name('messages.index');
 
     // send (create) a message -- backend
-    Route::get('/message/send', 'create')
+    Route::get('/messages/send', 'create')
         ->name('message.send');
     Route::post('/messages', 'store')
         ->name('messages.store');

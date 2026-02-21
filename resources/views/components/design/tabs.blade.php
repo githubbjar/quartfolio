@@ -45,7 +45,7 @@
                     >
                     @foreach ($covers as $cover)
                         <div @class(['hidden lg:block' => $loop->index === 2])>
-                            <a href="/cover/{{ $cover->slug }}" class="block w-full">
+                            <a href="/covers/{{ $cover->slug }}" class="block w-full">
                                 <img class="block w-full h-auto" src="{{ asset($cover->thumb_path) }}" alt="{{ $cover->title }}">
                             </a>
                         </div>
@@ -59,7 +59,7 @@
                     @foreach ($layouts as $layout)
                         <div x-show="['2'].includes(category)">
                             <div class="relative">                                    
-                                <a href="/layout/{{ $layout->slug }}">
+                                <a href="/layouts/{{ $layout->slug }}">
                                     <img src="{{ asset($layout->thumb_path) }}" alt="{{ $layout->title }}">
                                 </a>
                             </div>

@@ -140,7 +140,7 @@ class ProjectController extends Controller
         $project->delete();
 
         return redirect()
-            ->route('home')
+            ->route('projects.index')
             ->with('success', 'Project deleted.');
     }
 }
