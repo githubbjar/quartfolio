@@ -37,7 +37,7 @@ class AdminAuthController extends Controller
         // your "auth token"
         $request->session()->put('admin_logged_in', true);
 
-        return redirect()->route('projects.index')
+        return redirect()->route('admin.projects.index')
             ->with('success', 'Admin login successful.');
     }
 

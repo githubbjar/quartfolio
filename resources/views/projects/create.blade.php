@@ -19,7 +19,7 @@
         @endif
 
         <form
-            action="{{ route('projects.store') }}"
+            action="{{ route('admin.projects.store') }}"
             method="POST"
             class="space-y-6 bg-white p-6 rounded shadow"
         >
@@ -136,7 +136,7 @@
             {{-- Actions --}}
             <div class="flex justify-between items-center">
                 <a
-                    href="{{ route('projects.index') }}"
+                    href="{{ route('admin.projects.index') }}"
                     class="text-gray-600 hover:underline"
                 >
                     Cancel

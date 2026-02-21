@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])
     ->name('home');
 
+/*
 Route::controller(ProjectController::class)->group(function () {
 
     // show covers -- frontend
@@ -44,6 +45,46 @@ Route::controller(ProjectController::class)->group(function () {
     // toggle "is_featured" -- backend
     Route::patch('/projects/{project}/toggle-featured', 'toggleFeatured')
         ->name('projects.toggleFeatured');
+
+});
+*/
+
+Route::controller(ProjectController::class)->group(function () {
+
+    // Covers
+    Route::get('/covers', 'coversIndex')
+        ->name('covers.index');
+    Route::get('/covers/{project:slug}', 'coverShow')
+        ->name('covers.show');
+
+    // Layouts
+    Route::get('/layouts', 'layoutsIndex')
+        ->name('layouts.index');
+    Route::get('/layouts/{project:slug}', 'layoutShow')
+        ->name('layouts.show');
+
+    // Eblasts
+    Route::get('/eblasts', 'eblastsIndex')
+        ->name('eblasts.index');
+
+    // Misc as “Projects” (frontend)
+    /* Route::get('/projects', 'miscIndex')
+        ->name('public.projects.index');
+    Route::get('/projects/{project:slug}', 'miscShow')
+        ->name('public.projects.show'); */
+
+});
+
+Route::prefix('admin')->controller(ProjectController::class)->group(function () {
+
+    Route::get('/projects', 'projectsIndex')
+        ->name('admin.projects.index');
+    Route::get('/projects/create', 'create')->name('admin.projects.create');
+    Route::post('/projects', 'store')->name('admin.projects.store');
+
+    Route::delete('/projects/{project}', 'destroy')->name('admin.projects.destroy');
+    Route::patch('/projects/{project}/toggle-featured', 'toggleFeatured')
+        ->name('admin.projects.toggleFeatured');
 
 });
 

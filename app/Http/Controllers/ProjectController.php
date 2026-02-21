@@ -40,7 +40,7 @@ class ProjectController extends Controller
         $projects = Project::orderBy('type', 'asc')
             ->orderBy('year', 'desc')      // newest year first
             ->orderBy('quarter', 'desc')   // newest quarter first
-            ->paginate(10);
+            ->paginate(20);
 
         return view('projects.index', compact('projects'));
 
@@ -121,7 +121,7 @@ class ProjectController extends Controller
         Project::create($data);
 
         return redirect()
-            ->route('projects.index')
+            ->route('admin.projects.index')
             ->with('status', 'Project created.');
     }
 
@@ -140,7 +140,7 @@ class ProjectController extends Controller
         $project->delete();
 
         return redirect()
-            ->route('projects.index')
+            ->route('admin.projects.index')
             ->with('success', 'Project deleted.');
     }
 }

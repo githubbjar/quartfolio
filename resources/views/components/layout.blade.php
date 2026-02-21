@@ -50,7 +50,7 @@
                         @if (session('admin_logged_in'))
     
                             <li>
-                                <a class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="{{ route('projects.index') }}">Projects</a>
+                                <a class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="{{ route('admin.projects.index') }}">Projects</a>
                             </li>
 
                             <li>

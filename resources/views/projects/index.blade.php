@@ -4,7 +4,10 @@
         <x-section.header>
             <x-section.title>All Projects</x-section.title>
             <x-section.subtitle>Add / Scrap</x-section.subtitle>
-            <a class="font-bold btn-sm text-white bg-black hover:bg-gray-500 rounded-none mt-6" href="/projects/create">+ Add Project</a>
+            <a class="font-bold btn-sm text-white bg-black hover:bg-gray-500 rounded-none mt-6"
+                href="{{ route('admin.projects.create') }}">
+                    + Add Project
+            </a>
         </x-section.header>
 
 
@@ -43,7 +46,7 @@
                         <tr class="hover:bg-gray-50">
 
                             <td class="px-4 py-3 text-center">
-                                <form method="POST" action="{{ route('projects.toggleFeatured', $project) }}">
+                                <form method="POST" action="{{ route('admin.projects.toggleFeatured', $project) }}">
                                     @csrf
                                     @method('PATCH')
 
@@ -70,7 +73,7 @@
                             </td>
 
                             <td class="px-4 py-3 text-center space-x-2">
-                                <form action="{{ route('projects.destroy', $project->slug) }}"
+                                <form action="{{ route('admin.projects.destroy', $project) }}"
                                     method="POST"
                                     onsubmit="return confirm('Delete this project?')"
                                     class="inline">
