@@ -11,7 +11,7 @@ test('a project can be deleted', function () {
 
     $project = Project::factory()->create();
 
-    delete(route('project.destroy', $project))
+    delete(route('admin.projects.destroy', $project))
         ->assertRedirect();
 
     $this->assertDatabaseMissing('projects', [
