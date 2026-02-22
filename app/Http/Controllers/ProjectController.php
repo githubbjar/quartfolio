@@ -8,6 +8,10 @@ use Illuminate\Support\Str;
 
 class ProjectController extends Controller
 {
+
+    // Public-facing index and show methods
+
+    // covers -- index and show, with previous/next navigation
     public function coversIndex()
     {
         $covers = Project::where('type', 'cover')
@@ -15,35 +19,6 @@ class ProjectController extends Controller
             ->paginate(3);
 
         return view('covers.index', compact('covers'));
-    }
-
-    public function layoutsIndex()
-    {
-        $layouts = Project::where('type', 'layout')
-            ->orderBy('created_at', 'desc')
-            ->paginate(4);
-
-        return view('layouts.index', compact('layouts'));
-    }
-
-    public function eblastsIndex()
-    {
-        $eblasts = Project::where('type', 'eblast')
-            ->orderBy('created_at', 'desc')
-            ->paginate(3);
-
-        return view('eblasts.index', compact('eblasts'));
-    }
-
-    public function projectsIndex()
-    {
-        $projects = Project::orderBy('type', 'asc')
-            ->orderBy('year', 'desc')      // newest year first
-            ->orderBy('quarter', 'desc')   // newest quarter first
-            ->paginate(20);
-
-        return view('projects.index', compact('projects'));
-
     }
 
     public function coverShow(Project $project)
@@ -63,21 +38,60 @@ class ProjectController extends Controller
         return view('covers.show', compact('project', 'previous', 'next'));
     }
 
+    //layouts -- index and show, similar to covers but separate views and pagination
+    public function layoutsIndex()
+    {
+        $layouts = Project::where('type', 'layout')
+            ->orderBy('created_at', 'desc')
+            ->paginate(4);
+
+        return view('layouts.index', compact('layouts'));
+    }
+
     public function layoutShow(Project $project)
     {
-        // Previous cover project
+        // Previous layout project
         $previous = Project::where('type', 'layout')
             ->where('id', '<', $project->id)
             ->orderBy('id', 'desc')
             ->first();
 
-        // Next cover project
+        // Next layout project
         $next = Project::where('type', 'layout')
             ->where('id', '>', $project->id)
             ->orderBy('id', 'asc')
             ->first();
 
         return view('layouts.show', compact('project', 'previous', 'next'));
+    }
+
+    //eblasts -- index only, no show page
+
+    public function eblastsIndex()
+    {
+        $eblasts = Project::where('type', 'eblast')
+            ->orderBy('created_at', 'desc')
+            ->paginate(3);
+
+        return view('eblasts.index', compact('eblasts'));
+    }
+
+
+
+
+
+
+    // admin-facing index, create, store, toggleFeatured, and destroy methods
+
+    public function projectsIndex()
+    {
+        $projects = Project::orderBy('type', 'asc')
+            ->orderBy('year', 'desc')      // newest year first
+            ->orderBy('quarter', 'desc')   // newest quarter first
+            ->paginate(20);
+
+        return view('projects.index', compact('projects'));
+
     }
 
     public function create()
