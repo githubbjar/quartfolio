@@ -5,17 +5,9 @@
 
         @foreach($eblasts as $eblast)
             
-            @php
-                $imagePathEblast = "images/eblasts/{$eblast->slug}.webp";
-            @endphp  
-            
-            <a href="{{ $eblast->description }}" target="_blank">
+            <a href="{{ $eblast->external_url }}" target="_blank" rel="noopener noreferrer">
                 <div class="h-124 overflow-hidden hover:overflow-y-auto">
-                    <img
-                        src="{{ asset($eblast->thumb_path) }}"
-                        alt=""
-                        class="w-full"
-                    />
+                    <img src="{{ asset($eblast->thumb_path) }}" alt="{{ $eblast->title }}" class="w-full">
                 </div>
             </a>
 

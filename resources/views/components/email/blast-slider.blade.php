@@ -9,7 +9,9 @@
     <x-email.stats />
 
     <x-email.thumbnails :eblasts="$eblasts" />
-
-    <x-design.more-button category="" url="/eblasts">Eblasts</x-section.more-button>
+    
+    <x-design.more-button category="1" :url="route('eblasts.index')">
+        Eblasts — {{ $eblastCount }}
+    </x-design.more-button>
 
 </x-section.layout>

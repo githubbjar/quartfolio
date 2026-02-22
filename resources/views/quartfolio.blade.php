@@ -4,6 +4,6 @@
     <x-design.tabs :covers="$covers" :layouts="$layouts" :coverCount="$coverCount" :layoutCount="$layoutCount" />
     <x-testimonials.testimonials />
     <x-development.web-slider :websites="$websites" />
-    <x-email.blast-slider :eblasts="$eblasts" />
+    <x-email.blast-slider :eblasts="$eblasts" :eblastCount="$eblastCount" />
     
 </x-layout>

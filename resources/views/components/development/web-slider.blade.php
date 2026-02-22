@@ -29,7 +29,8 @@
                             <a
                                 class="text-xs font-bold text-white py-2 px-3 rounded-full bg-gray-900 hover:bg-gray-900/50 transition"
                                 href="{{ $website->external_url }}"
-                                target="_blank"
+                                target="_blank" 
+                                rel="noopener noreferrer"
                             >
                                 {{ $website->title }}
                             </a>

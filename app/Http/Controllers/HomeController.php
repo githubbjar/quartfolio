@@ -36,6 +36,8 @@ class HomeController extends Controller
                 ->latest()
                 ->get(),
 
+            'eblastCount' => Project::where('type', 'eblast')->count(),
+
         ]);
     }
 }

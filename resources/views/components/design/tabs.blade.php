@@ -29,9 +29,9 @@
             <!-- Category buttons -->
             <div class="flex items-center justify-center gap-4 mb-6">
 
-                <x-design.button category="1">Covers</x-button-tabs>
-                <x-design.button category="2">Layouts</x-button-tabs>
-                <x-design.button category="3">Misc.</x-button-tabs>
+                <x-design.button category="1">Covers</x-design.button>
+                <x-design.button category="2">Layouts</x-design.button>
+                <x-design.button category="3">Misc.</x-design.button>
                 
             </div>
             
@@ -45,7 +45,7 @@
                     >
                     @foreach ($covers as $cover)
                         <div @class(['hidden lg:block' => $loop->index === 2])>
-                            <a href="/covers/{{ $cover->slug }}" class="block w-full">
+                            <a href="{{ route('covers.show', $cover) }}" class="block w-full">
                                 <img class="block w-full h-auto" src="{{ asset($cover->thumb_path) }}" alt="{{ $cover->title }}">
                             </a>
                         </div>
@@ -70,8 +70,13 @@
                 
 
 
-            <x-design.more-button category="1" url="/covers">Covers &#8212; {{ $coverCount }} </x-design.more-button>
-            <x-design.more-button category="2" url="/layouts">Layouts &#8212; {{ $layoutCount }}</x-design.more-button>
+            <x-design.more-button category="1" :url="route('covers.index')">
+                Covers — {{ $coverCount }}
+            </x-design.more-button>
+
+            <x-design.more-button category="2" :url="route('layouts.index')">
+                Layouts — {{ $layoutCount }}
+            </x-design.more-button>
 
     </div>
 
