@@ -87,7 +87,7 @@
 
                     <!-- Hamburger button -->
                     <button
-                        class="hamburger"
+                        class="hamburger mr-8"
                         :class="{ 'active': expanded }"
                         @click.stop="expanded = !expanded"
                         aria-controls="mobile-nav"
@@ -122,17 +122,42 @@
                             <!-- Links -->
                             <ul>
                                 <li>
-                                    <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="about.html">About</a>
+                                    <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('covers.index') }}">Covers</a>
                                 </li>
                                 <li>
-                                    <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="blog.html">FAQ</a>
+                                    <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('layouts.index') }}">Layouts</a>
                                 </li>
                                 <li>
-                                    <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="testimonials.html">Resume</a>
+                                    <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('eblasts.index') }}">Eblasts</a>
                                 </li>
                                 <li>
-                                <a class="font-bold btn-sm text-white bg-black hover:bg-gray-700 mt-3" href="contact.html">Contact</a>
+                                <a class="font-bold btn-sm text-white bg-black hover:bg-gray-700 mt-3 mb-6" href="contact.html">Contact</a>
                             </li>
+
+                            @if (session('admin_logged_in'))
+
+                            <li>
+                                <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('admin.projects.index') }}">Projects</a>
+                            </li>
+
+                            <li>
+                                <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('messages.index') }}">Messages</a>
+                            </li>
+
+                            <li>
+                                <form method="POST" action="{{ route('admin.logout') }}">
+                                    @csrf
+                                    <button
+                                        type="submit"
+                                        class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2 w-full text-left"
+                                    >
+                                        Logout
+                                    </button>
+                                </form>
+                            </li>
+
+                            @endif
+
                             </ul>
                             
                             

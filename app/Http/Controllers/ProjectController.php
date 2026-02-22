@@ -8,7 +8,6 @@ use Illuminate\Support\Str;
 
 class ProjectController extends Controller
 {
-
     // Public-facing index and show methods
 
     // covers -- index and show, with previous/next navigation
@@ -38,7 +37,7 @@ class ProjectController extends Controller
         return view('covers.show', compact('project', 'previous', 'next'));
     }
 
-    //layouts -- index and show, similar to covers but separate views and pagination
+    // layouts -- index and show, similar to covers but separate views and pagination
     public function layoutsIndex()
     {
         $layouts = Project::where('type', 'layout')
@@ -65,7 +64,7 @@ class ProjectController extends Controller
         return view('layouts.show', compact('project', 'previous', 'next'));
     }
 
-    //eblasts -- index only, no show page
+    // eblasts -- index only, no show page
 
     public function eblastsIndex()
     {
@@ -75,11 +74,6 @@ class ProjectController extends Controller
 
         return view('eblasts.index', compact('eblasts'));
     }
-
-
-
-
-
 
     // admin-facing index, create, store, toggleFeatured, and destroy methods
 
