@@ -1,54 +1,47 @@
 <footer class="bg-black text-gray-300 footer">
-    <div class="max-w-7xl mx-auto px-6 py-12 grid gap-8 md:grid-cols-3">
+    <div class="max-w-7xl mx-auto px-18 py-12 grid lg:grid-cols-2">
 
         {{-- Identity --}}
         <div>
-            <h3 class="text-black font-semibold text-lg pt-10">
-                Jerry M. Janquart
+            <h3 class="tinos-regular text-black font-semibold text-4xl">
+                Quartfolio 
             </h3>
             <p class="text-sm text-black mt-2">
-                Designer & Laravel Developer crafting clean, performant web experiences.
+                <strong>The online portfolio of Jerry M. Janquart</strong><br />Designer & Developer crafting clean, performant web experiences.
             </p>
             <p class="text-xs mt-4 text-black">
                 Built with Laravel, Tailwind, Alpine, Vite
             </p>
         </div>
 
-        {{-- Navigation --}}
-        <div>
-            <h4 class="text-white font-semibold mb-3">Explore</h4>
-            <ul class="space-y-2 text-sm">
-                <li><a href="" class="hover:text-white">Work</a></li>
-                <li><a href="" class="hover:text-white">About</a></li>
-                <li><a href="" class="hover:text-white">Contact</a></li>
-                <li>
-                    <a href="/resume.pdf" class="hover:text-white" target="_blank">
-                        Resume (PDF)
-                    </a>
-                </li>
-            </ul>
-        </div>
-
         {{-- Contact --}}
-        <div>
-            <h4 class="text-white font-semibold mb-3">Connect</h4>
-            <ul class="space-y-2 text-sm">
-                <li>
-                    <a href="mailto:you@email.com" class="hover:text-white">
-                        you@email.com
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/yourusername" target="_blank" class="hover:text-white">
-                        GitHub
-                    </a>
-                </li>
-                <li>
-                    <a href="https://linkedin.com/in/yourusername" target="_blank" class="hover:text-white">
-                        LinkedIn
-                    </a>
-                </li>
-            </ul>
+        <div class="flex flex-col pb-10 gap-6 text-lg pt-10">
+
+            
+
+            <div class="flex flex-wrap items-center justify-center gap-8 text-lg text-black">
+
+    <span class="font-semibold">
+        Connect
+    </span>
+
+    <a href="mailto:jmjanquart@gmail.com" class="hover:underline">
+        jmjanquart@gmail.com
+    </a>
+
+    <a href="https://github.com/githubjar" target="_blank" rel="noopener" class="hover:underline">
+        GitHub
+    </a>
+
+    <a href="https://linkedin.com/in/jmjanquart" target="_blank" rel="noopener" class="hover:underline">
+        LinkedIn
+    </a>
+
+</div>
+    </div>
+
+</div>
+
         </div>
     </div>
 

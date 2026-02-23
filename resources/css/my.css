@@ -8,7 +8,7 @@
 .footer {
     background-image: url('../images/homepage/footer.webp');
     background-size: cover;
-    background-position: center;
+    background-position: left top;
     background-repeat: no-repeat;
 }
 
