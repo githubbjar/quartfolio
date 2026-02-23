@@ -44,6 +44,9 @@
                             <a class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="{{ route('layouts.index') }}">Layouts</a>
                         </li>
                         <li>
+                            <a class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="{{ route('promotions.index') }}">Promotions</a>
+                        </li>
+                        <li>
                             <a class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="{{ route('eblasts.index') }}">Eblasts</a>
                         </li>
 
@@ -126,6 +129,9 @@
                                 </li>
                                 <li>
                                     <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('layouts.index') }}">Layouts</a>
+                                </li>
+                                <li>
+                                    <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('promotions.index') }}">Promotions</a>
                                 </li>
                                 <li>
                                     <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('eblasts.index') }}">Eblasts</a>

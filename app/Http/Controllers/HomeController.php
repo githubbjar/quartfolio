@@ -26,6 +26,14 @@ class HomeController extends Controller
 
             'layoutCount' => Project::where('type', 'layout')->count(),
 
+            'promotions' => Project::where('type', 'promotion')
+                ->where('is_featured', true)
+                ->latest()
+                ->take(3)
+                ->get(),
+
+            'promotionCount' => Project::where('type', 'promotion')->count(),
+
             'websites' => Project::where('type', 'website')
                 ->where('is_featured', true)
                 ->latest()
@@ -34,6 +42,7 @@ class HomeController extends Controller
             'eblasts' => Project::where('type', 'eblast')
                 ->where('is_featured', true)
                 ->latest()
+                ->take(3)
                 ->get(),
 
             'eblastCount' => Project::where('type', 'eblast')->count(),

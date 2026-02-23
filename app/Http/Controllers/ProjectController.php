@@ -15,23 +15,23 @@ class ProjectController extends Controller
     {
         $covers = Project::where('type', 'cover')
             ->orderBy('created_at', 'desc')
-            ->paginate(3);
+            ->paginate(9);
 
         return view('covers.index', compact('covers'));
     }
 
     public function coverShow(Project $project)
     {
-        // Previous cover project
+        abort_unless($project->type === 'cover', 404);
+
         $previous = Project::where('type', 'cover')
-            ->where('id', '<', $project->id)
-            ->orderBy('id', 'desc')
+            ->where('created_at', '>', $project->created_at)
+            ->orderBy('created_at')
             ->first();
 
-        // Next cover project
         $next = Project::where('type', 'cover')
-            ->where('id', '>', $project->id)
-            ->orderBy('id', 'asc')
+            ->where('created_at', '<', $project->created_at)
+            ->orderBy('created_at', 'desc')
             ->first();
 
         return view('covers.show', compact('project', 'previous', 'next'));
@@ -42,7 +42,7 @@ class ProjectController extends Controller
     {
         $layouts = Project::where('type', 'layout')
             ->orderBy('created_at', 'desc')
-            ->paginate(4);
+            ->paginate(8);
 
         return view('layouts.index', compact('layouts'));
     }
@@ -64,16 +64,63 @@ class ProjectController extends Controller
         return view('layouts.show', compact('project', 'previous', 'next'));
     }
 
+    // promotions -- index and show, similar to covers but separate views and pagination
+
+    public function promotionsIndex()
+    {
+        $promotions = Project::where('type', 'promotion')
+            ->orderBy('created_at', 'desc')
+            ->paginate(9);
+
+        return view('promotions.index', compact('promotions'));
+    }
+
+    public function promotionShow(Project $project)
+    {
+        // Previous promotion project
+        $previous = Project::where('type', 'promotion')
+            ->where('id', '<', $project->id)
+            ->orderBy('id', 'desc')
+            ->first();
+
+        // Next promotion project
+        $next = Project::where('type', 'promotion')
+            ->where('id', '>', $project->id)
+            ->orderBy('id', 'asc')
+            ->first();
+
+        return view('promotions.show', compact('project', 'previous', 'next'));
+    }
+
     // eblasts -- index only, no show page
 
     public function eblastsIndex()
     {
         $eblasts = Project::where('type', 'eblast')
             ->orderBy('created_at', 'desc')
-            ->paginate(3);
+            ->paginate(9);
 
         return view('eblasts.index', compact('eblasts'));
     }
+
+    public function eblastShow(Project $project)
+    {
+        // Previous eblast project
+        $previous = Project::where('type', 'eblast')
+            ->where('id', '<', $project->id)
+            ->orderBy('id', 'desc')
+            ->first();
+
+        // Next eblast project
+        $next = Project::where('type', 'eblast')
+            ->where('id', '>', $project->id)
+            ->orderBy('id', 'asc')
+            ->first();
+
+        return view('eblasts.show', compact('project', 'previous', 'next'));
+    }
+
+    
 
     // admin-facing index, create, store, toggleFeatured, and destroy methods
 

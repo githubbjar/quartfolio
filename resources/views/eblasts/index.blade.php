@@ -13,23 +13,16 @@
         <div class="mx-auto lg:max-w-6xl md:max-w-5xl max-w-2xl px-10 lg:px-1 pt-10">
             <div class="grid md:grid-cols-3 gap-6">
                 
-                @foreach ($eblasts as $eblast)
-                    @php
-                        $imagePath = "images/eblasts/{$eblast->slug}.webp";
-                    @endphp
-
-                    <a href="{{ $eblast->description }}" target="_blank">
+                @foreach($eblasts as $eblast)
+            
+                    <a href="{{ $eblast->external_url }}" target="_blank" rel="noopener noreferrer">
                         <div class="h-124 overflow-hidden hover:overflow-y-auto">
-                            <img
-                                src="{{ asset($imagePath) }}"
-                                alt=""
-                                class="w-full"
-                                target="_blank"
-                            />
+                            <img src="{{ asset($eblast->thumb_path) }}" alt="{{ $eblast->title }}" class="w-full">
                         </div>
                     </a>
 
                 @endforeach
+
             
             </div>
             

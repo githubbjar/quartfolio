@@ -66,12 +66,14 @@ Route::controller(ProjectController::class)->group(function () {
     // Eblasts
     Route::get('/eblasts', 'eblastsIndex')
         ->name('eblasts.index');
+    Route::get('/eblasts/{project:slug}', 'eblastShow')
+        ->name('eblasts.show');    
 
-    // Misc as “Projects” (frontend)
-    /* Route::get('/projects', 'miscIndex')
-        ->name('public.projects.index');
-    Route::get('/projects/{project:slug}', 'miscShow')
-        ->name('public.projects.show'); */
+    // Promotions as “Projects” (frontend)
+    Route::get('/promotions', 'promotionsIndex')
+        ->name('promotions.index');
+    Route::get('/promotions/{project:slug}', 'promotionShow')
+        ->name('promotions.show');
 
 });
 
