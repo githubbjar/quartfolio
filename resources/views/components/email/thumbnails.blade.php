@@ -7,7 +7,7 @@
             
             <a href="{{ $eblast->external_url }}" target="_blank" rel="noopener noreferrer">
                 <div class="h-124 overflow-hidden hover:overflow-y-auto">
-                    <img src="{{ asset($eblast->thumb_path) }}" alt="{{ $eblast->title }}" class="w-full">
+                    <img src="{{ $eblast->thumb_url }}" alt="{{ $eblast->title }}" class="w-full">
                 </div>
             </a>
 

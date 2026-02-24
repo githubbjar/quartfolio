@@ -18,7 +18,7 @@
 
                 <div class="swiper-slide max-w-lg">
                     <img 
-                        src="{{ asset($website->thumb_path) }}" 
+                        src="{{ $website->thumb_url }}" 
                         width="540" 
                         height="460" 
                         alt="{{ $website->title }}"

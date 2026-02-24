@@ -46,7 +46,7 @@
                     @foreach ($covers as $cover)
                         <div @class(['hidden lg:block' => $loop->index === 2])>
                             <a href="{{ route('covers.show', $cover) }}" class="block w-full">
-                                <img class="block w-full h-auto" src="{{ asset($cover->thumb_path) }}" alt="{{ $cover->title }}">
+                                <img class="block w-full h-auto" src="{{ $cover->thumb_url }}" alt="{{ $cover->title }}">
                             </a>
                         </div>
                     @endforeach

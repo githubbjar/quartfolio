@@ -16,7 +16,7 @@
                     <div x-show="['1'].includes(category)">
                         <div class="relative">                                    
                             <a href="{{ route('layouts.show', $layout) }}">
-                                <img src="{{ asset($layout->thumb_path) }}" alt="{{ $layout->title }}">
+                                <img src="{{ $layout->thumb_url }}" alt="{{ $layout->title }}">
                             </a>
                         </div>
                     </div>

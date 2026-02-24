@@ -11,7 +11,7 @@
         >
             <div class="grid grid-cols-1 gap-6">
                 <img
-                    src="{{ asset($project->hero_path) }}"
+                    src="{{ $cover->thumb_url }}"
                     alt="{{ $project->title }}"
                     class="w-full h-auto"
                 >

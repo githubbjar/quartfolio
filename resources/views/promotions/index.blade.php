@@ -16,7 +16,7 @@
                     <div x-show="['3'].includes(category)">
                         <div class="relative">                                    
                             <a href="{{ route('promotions.show', $promotion) }}">
-                                <img src="{{ asset($promotion->thumb_path) }}" alt="{{ $promotion->title }}">
+                                <img src="{{ $promotion->thumb_url }}" alt="{{ $promotion->title }}">
                             </a>
                         </div>
                     </div>
