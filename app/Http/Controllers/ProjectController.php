@@ -77,16 +77,16 @@ class ProjectController extends Controller
 
     public function promotionShow(Project $project)
     {
-        // Previous promotion project
+        abort_unless($project->type === 'promotion', 404);
+
         $previous = Project::where('type', 'promotion')
-            ->where('id', '<', $project->id)
-            ->orderBy('id', 'desc')
+            ->where('created_at', '>', $project->created_at)
+            ->orderBy('created_at')
             ->first();
 
-        // Next promotion project
         $next = Project::where('type', 'promotion')
-            ->where('id', '>', $project->id)
-            ->orderBy('id', 'asc')
+            ->where('created_at', '<', $project->created_at)
+            ->orderBy('created_at', 'desc')
             ->first();
 
         return view('promotions.show', compact('project', 'previous', 'next'));
