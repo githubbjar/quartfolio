@@ -51,7 +51,7 @@
                     <option value="layout">Layout</option>
                     <option value="website">Website</option>
                     <option value="eblast">Eblast</option>
-                    <option value="misc">Misc.</option>
+                    <option value="promotion">Promotion</option>
 
                 </select>
             </div>
