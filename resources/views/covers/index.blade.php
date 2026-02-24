@@ -15,7 +15,7 @@
                 @foreach ($covers as $cover)
                     <div x-show="['1'].includes(category)">
                         <div class="relative">                                    
-                            <a href="/covers/{{ $cover->slug }}">
+                            <a href="{{ route('covers.show', $cover) }}">
                                 <img src="{{ asset($cover->thumb_path) }}" alt="{{ $cover->title }}">
                             </a>
                         </div>
