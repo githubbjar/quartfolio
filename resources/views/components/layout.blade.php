@@ -52,24 +52,47 @@
 
                         @if (session('admin_logged_in'))
     
-                            <li>
-                                <a class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="{{ route('admin.projects.index') }}">Projects</a>
-                            </li>
+                            <li x-data="{ open: false }" class="relative">
+                                
+                                <!-- Trigger -->
+                                <button 
+                                    @click="open = !open"
+                                    @click.away="open = false"
+                                    class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out"
+                                >
+                                    Admin
+                                    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
 
-                            <li>
-                                <a class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="{{ route('messages.index') }}">Messages</a>
-                            </li>
+                                <!-- Dropdown -->
+                                <div 
+                                    x-show="open"
+                                    x-transition
+                                    class="absolute right-0 mt-2 w-48 bg-white shadow-lg border border-gray-200"
+                                >
+                                    <a class="block px-5 py-2 hover:bg-gray-100"
+                                    href="{{ route('admin.projects.index') }}">
+                                        Projects
+                                    </a>
 
-                            <li>
-                                <form method="POST" action="{{ route('admin.logout') }}">
-                                    @csrf
-                                    <button
-                                        type="submit"
-                                        class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out w-full text-left"
-                                    >
-                                        Logout
-                                    </button>
-                                </form>
+                                    <a class="block px-5 py-2 hover:bg-gray-100"
+                                    href="{{ route('messages.index') }}">
+                                        Messages
+                                    </a>
+
+                                    <form method="POST" action="{{ route('admin.logout') }}">
+                                        @csrf
+                                        <button
+                                            type="submit"
+                                            class="block w-full text-left px-5 py-2 hover:bg-gray-100"
+                                        >
+                                            Logout
+                                        </button>
+                                    </form>
+                                </div>
                             </li>
 
                         @endif
