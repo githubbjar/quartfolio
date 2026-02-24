@@ -152,28 +152,16 @@ class ProjectController extends Controller
             'external_url' => ['nullable', 'url'],
         ]);
 
-        // checkbox safety
         $data['is_featured'] = (bool) $request->input('is_featured', false);
 
-        // Create a base slug from title
-        $baseSlug = Str::slug($data['title']);
+        // Create project (slug auto-generated in model)
+        $project = Project::create($data);
 
-        // Ensure uniqueness (salvo-issue-76, salvo-issue-76-2, etc.)
-        $slug = $baseSlug;
-        $i = 2;
-        while (Project::where('slug', $slug)->exists()) {
-            $slug = "{$baseSlug}-{$i}";
-            $i++;
-        }
-
-        $data['slug'] = $slug;
-
-        // Auto-generate image paths (served via public/storage after storage:link)
-        // Files should live at: storage/app/public/projects/{slug}-hero.webp and -thumb.webp
-        $data['hero_path'] = "storage/projects/{$slug}-hero.webp";
-        $data['thumb_path'] = "storage/projects/{$slug}-thumb.webp";
-
-        Project::create($data);
+        // Set image paths based on final slug
+        $project->update([
+            'hero_path'  => "projects/{$project->slug}-hero.webp",
+            'thumb_path' => "projects/{$project->slug}-thumb.webp",
+        ]);
 
         return redirect()
             ->route('admin.projects.index')

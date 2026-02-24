@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\ProjectImportController;
 
 Route::get('/', [HomeController::class, 'index'])
     ->name('home');
@@ -89,6 +90,9 @@ Route::prefix('admin')->controller(ProjectController::class)->group(function () 
         ->name('admin.projects.toggleFeatured');
 
 });
+
+Route::post('/admin/projects/import', ProjectImportController::class)
+    ->name('admin.projects.import');
 
 Route::controller(MessageController::class)->group(function () {
 

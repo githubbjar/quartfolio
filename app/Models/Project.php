@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class Project extends Model
 {
@@ -72,4 +73,24 @@ class Project extends Model
         // Optional fallback (or null)
         return asset("images/covers/{$this->slug}.webp");
     }
+
+    protected static function booted()
+    {
+        static::creating(function ($project) {
+
+            if (empty($project->slug)) {
+
+                $baseSlug = Str::slug($project->title);
+                $slug = $baseSlug;
+                $count = 1;
+
+                while (static::where('slug', $slug)->exists()) {
+                    $slug = $baseSlug . '-' . $count++;
+                }
+
+                $project->slug = $slug;
+            }
+        });
+    }
+
 }
