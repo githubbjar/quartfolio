@@ -104,6 +104,12 @@
             {{ $projects->links() }}
         </div>
 
+        <form action="{{ route('admin.projects.import') }}" method="POST" enctype="multipart/form-data" class="mt-6">
+            @csrf
+            <input type="file" name="csv_file" accept=".csv,text/csv" required>
+            <button type="submit" class="btn-sm text-white bg-black px-4 py-2 rounded-none">Import CSV</button>
+        </form>
+
     </div>
     </x-section.art-layout>
 </x-layout>
