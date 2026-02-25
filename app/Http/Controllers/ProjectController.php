@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Project;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
 
 class ProjectController extends Controller
 {
@@ -120,8 +119,6 @@ class ProjectController extends Controller
         return view('eblasts.show', compact('project', 'previous', 'next'));
     }
 
-    
-
     // admin-facing index, create, store, toggleFeatured, and destroy methods
 
     public function projectsIndex()
@@ -159,7 +156,7 @@ class ProjectController extends Controller
 
         // Set image paths based on final slug
         $project->update([
-            'hero_path'  => "projects/{$project->slug}-hero.webp",
+            'hero_path' => "projects/{$project->slug}-hero.webp",
             'thumb_path' => "projects/{$project->slug}-thumb.webp",
         ]);
 

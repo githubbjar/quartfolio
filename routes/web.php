@@ -1,11 +1,11 @@
 <?php
 
+use App\Http\Controllers\Admin\ProjectImportController;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\ProjectImportController;
 
 Route::get('/', [HomeController::class, 'index'])
     ->name('home');
@@ -68,7 +68,7 @@ Route::controller(ProjectController::class)->group(function () {
     Route::get('/eblasts', 'eblastsIndex')
         ->name('eblasts.index');
     Route::get('/eblasts/{project:slug}', 'eblastShow')
-        ->name('eblasts.show');    
+        ->name('eblasts.show');
 
     // Promotions as “Projects” (frontend)
     Route::get('/promotions', 'promotionsIndex')

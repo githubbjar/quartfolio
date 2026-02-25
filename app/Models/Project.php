@@ -85,12 +85,11 @@ class Project extends Model
                 $count = 1;
 
                 while (static::where('slug', $slug)->exists()) {
-                    $slug = $baseSlug . '-' . $count++;
+                    $slug = $baseSlug.'-'.$count++;
                 }
 
                 $project->slug = $slug;
             }
         });
     }
-
 }
