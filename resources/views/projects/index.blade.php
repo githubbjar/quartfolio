@@ -3,11 +3,28 @@
     <x-section.art-layout bg="graphics-bg">
         <x-section.header>
             <x-section.title>All Projects</x-section.title>
-            <x-section.subtitle>Add / Scrap</x-section.subtitle>
-            <a class="font-bold btn-sm text-white bg-black hover:bg-gray-500 rounded-none mt-6"
+            <x-section.subtitle>Add / Edit / Scrap / Import</x-section.subtitle>
+
+
+            <div class="flex gap-4 mt-6 justify-center">
+                <a class="font-bold btn-sm text-white bg-black hover:bg-gray-500 rounded-none"
                 href="{{ route('admin.projects.create') }}">
                     + Add Project
-            </a>
+                </a>
+
+                <a class="font-bold btn-sm text-white bg-black hover:bg-gray-500 rounded-none"
+                href="">
+                    ^ Import .csv
+                </a>
+            </div>
+
+
+            <form action="{{ route('admin.projects.import') }}" method="POST" enctype="multipart/form-data" class="mt-6">
+            @csrf
+            <input type="file" name="csv_file" accept=".csv,text/csv" required>
+            <button type="submit" class="btn-sm text-white bg-black px-4 py-2 rounded-none">Import CSV</button>
+        </form>
+
         </x-section.header>
 
 
@@ -103,12 +120,6 @@
         <div class="mt-6">
             {{ $projects->links() }}
         </div>
-
-        <form action="{{ route('admin.projects.import') }}" method="POST" enctype="multipart/form-data" class="mt-6">
-            @csrf
-            <input type="file" name="csv_file" accept=".csv,text/csv" required>
-            <button type="submit" class="btn-sm text-white bg-black px-4 py-2 rounded-none">Import CSV</button>
-        </form>
 
     </div>
     </x-section.art-layout>

@@ -7,6 +7,9 @@ use App\Models\Project;
 use Illuminate\Http\Request;
 
 class ProjectImportController extends Controller
+
+//csv format: title, type, description, is_featured (1 or empty), year, quarter (1-4), external_url
+
 {
     public function __invoke(Request $request)
     {
@@ -25,20 +28,23 @@ class ProjectImportController extends Controller
 
         while (($row = fgetcsv($file)) !== false) {
 
-            if (count($row) < 9 || trim(implode('', $row)) === '') {
+            if (count($row) < 7 || trim(implode('', $row)) === '') {
                 continue;
             }
 
-            Project::create([
+            $project = Project::create([
                 'title' => $row[0],
                 'type' => $row[1],
                 'description' => $row[2] ?: null,
                 'is_featured' => ! empty($row[3]),
                 'year' => (int) $row[4],
                 'quarter' => (int) $row[5],
-                'hero_path' => $row[6] ? 'projects/'.ltrim($row[6], '/') : null,
-                'thumb_path' => $row[7] ? 'projects/'.ltrim($row[7], '/') : null,
-                'external_url' => $row[8] ?: null,
+                'external_url' => $row[6] ?: null,
+            ]);
+
+            $project->update([
+                'hero_path' => "projects/{$project->slug}-hero.webp",
+                'thumb_path' => "projects/{$project->slug}-thumb.webp",
             ]);
         }
 
