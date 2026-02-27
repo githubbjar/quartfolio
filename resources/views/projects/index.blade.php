@@ -7,23 +7,63 @@
 
 
             <div class="flex gap-4 mt-6 justify-center">
+
                 <a class="font-bold btn-sm text-white bg-black hover:bg-gray-500 rounded-none"
                 href="{{ route('admin.projects.create') }}">
                     + Add Project
                 </a>
 
-                <a class="font-bold btn-sm text-white bg-black hover:bg-gray-500 rounded-none"
-                href="">
-                    ^ Import .csv
-                </a>
+                <div x-data="{ open: false }" class="relative">
+                    <button
+                        type="button"
+                        @click="open = true"
+                        class="font-bold btn-sm text-white bg-black hover:bg-gray-500 rounded-none"
+                    >
+                        ^ Import .csv
+                    </button>
+
+                        <!-- Modal Overlay -->
+                        <div
+                            x-show="open"
+                            class="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
+                            style="display: none;"
+                        >
+                            <!-- Modal Box -->
+                            <div
+                                @click.away="open = false"
+                                class="bg-white p-6 w-full max-w-md shadow-lg"
+                            >
+                                <h2 class="text-xl font-bold mb-4">Import CSV</h2>
+
+                                <form action="{{ route('admin.projects.import') }}"
+                                    method="POST"
+                                    enctype="multipart/form-data"
+                                    class="space-y-4">
+                                    @csrf
+
+                                    <input type="file"
+                                        name="csv_file"
+                                        accept=".csv,text/csv"
+                                        required
+                                        class="block w-full border p-2">
+
+                                    <div class="flex justify-end gap-2">
+                                        <button type="button"
+                                                @click="open = false"
+                                                class="px-4 py-2 border">
+                                            Cancel
+                                        </button>
+
+                                        <button type="submit"
+                                                class="btn-sm text-white bg-black px-4 py-2 rounded-none">
+                                            Import CSV
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
             </div>
-
-
-            <form action="{{ route('admin.projects.import') }}" method="POST" enctype="multipart/form-data" class="mt-6">
-            @csrf
-            <input type="file" name="csv_file" accept=".csv,text/csv" required>
-            <button type="submit" class="btn-sm text-white bg-black px-4 py-2 rounded-none">Import CSV</button>
-        </form>
 
         </x-section.header>
 

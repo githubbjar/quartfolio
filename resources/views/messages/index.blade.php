@@ -64,7 +64,7 @@
                                     @keydown.escape.window="open = false"
                                     x-cloak
                                 >
-                                    <div class="bg-white max-w-lg w-full rounded-lg shadow-xl p-6 relative" @click.stop>
+                                    <div class="bg-white max-w-lg w-full shadow-xl p-6 relative" @click.stop>
                                         <button
                                             @click="open = false"
                                             type="button"
