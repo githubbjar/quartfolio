@@ -86,6 +86,19 @@
     <div class="max-w-4xl mx-auto py-4 px-4">
 
         <div class="overflow-x-auto bg-white shadow rounded-none">
+            <div
+                x-data="{
+                    open: false,
+                    action: '',
+                    title: '',
+                    confirm(action, title) {
+                        this.action = action;
+                        this.title = title;
+                        this.open = true;
+                    }
+                }"
+                @keydown.escape.window="open = false"
+            >
             <table class="min-w-full border-collapse">
                 <thead class="bg-black text-gray-300 text-left">
                     <tr>
@@ -129,6 +142,8 @@
                                 {{ $project->type }}
                             </td>
 
+                            <!--
+
                             <td class="px-4 py-3 text-center space-x-2">
                                 <form action="{{ route('admin.projects.destroy', $project) }}"
                                     method="POST"
@@ -142,8 +157,21 @@
                                         <i class="fa fa-trash"></i>
                                     </button>
                                 </form>
+                                
 
                             </td>
+
+                            -->
+
+                            <td class="px-4 py-3 text-center space-x-2">
+                                <button
+                                    type="button"
+                                    class="text-black hover:text-red-800"
+                                    @click="confirm('{{ route('admin.projects.destroy', $project) }}', @js($project->title))"
+                                >
+                                    <i class="fa fa-trash"></i>
+                                </button>
+
                         </tr>
                     @empty
                         <tr>
@@ -154,6 +182,47 @@
                     @endforelse
                 </tbody>
             </table>
+
+            <div
+                x-show="open"
+                class="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
+                style="display: none;"
+            >
+                <div
+                    @click.away="open = false"
+                    class="bg-white p-6 w-full max-w-md shadow-lg"
+                >
+                    <h2 class="font-bold mb-3">Scrap project?</h2>
+
+                    <p class="mb-5">
+                        This will delete
+                        <span class="font-semibold" x-text="`“${title}”`"></span>.
+                        This cannot be undone.
+                    </p>
+
+                    <form :action="action" method="POST" class="flex justify-end gap-2">
+                        @csrf
+                        @method('DELETE')
+
+                        <button
+                            type="button"
+                            @click="open = false"
+                            class="px-4 py-2 border"
+                        >
+                            Cancel
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="px-4 py-2 bg-black text-white rounded-none"
+                        >
+                            Scrap
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            </div>  
         </div>
 
         {{-- Pagination --}}
