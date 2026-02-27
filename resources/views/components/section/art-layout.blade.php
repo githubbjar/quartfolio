@@ -1,5 +1,5 @@
 <!-- Tabs -->
-<section class="{{ $bg }} relative pb-50">
+<section class="{{ $bg }} relative pb-20">
     
     <div class="h-10 bg-black clip-diagonal"></div>
     
