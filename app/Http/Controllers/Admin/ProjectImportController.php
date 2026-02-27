@@ -25,6 +25,8 @@ class ProjectImportController extends Controller
 
         $header = fgetcsv($file); // skip header
 
+        $count = 0;
+
         while (($row = fgetcsv($file)) !== false) {
 
             if (count($row) < 7 || trim(implode('', $row)) === '') {
@@ -45,10 +47,15 @@ class ProjectImportController extends Controller
                 'hero_path' => "projects/{$project->slug}-hero.webp",
                 'thumb_path' => "projects/{$project->slug}-thumb.webp",
             ]);
+
+            $count++;
         }
 
         fclose($file);
 
-        return back()->with('success', 'Projects imported successfully!');
+        return back()->with(
+            'success',
+            "{$count} project" . ($count === 1 ? '' : 's') . " imported successfully."
+        );
     }
 }
