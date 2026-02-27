@@ -8,8 +8,7 @@ use Illuminate\Http\Request;
 
 class ProjectImportController extends Controller
 
-//csv format: title, type, description, is_featured (1 or empty), year, quarter (1-4), external_url
-
+    // csv format: title, type, description, is_featured (1 or empty), year, quarter (1-4), external_url
 {
     public function __invoke(Request $request)
     {

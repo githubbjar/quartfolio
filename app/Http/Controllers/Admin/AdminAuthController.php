@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -27,7 +28,7 @@ class AdminAuthController extends Controller
 
         if (! $emailOk || ! $passOk) {
             return back()
-                ->withErrors(['email' => 'Invalid credentials.'])
+                ->with('error', 'Invalid credentials.')
                 ->onlyInput('email');
         }
 

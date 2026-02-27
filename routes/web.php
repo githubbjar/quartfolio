@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminAuthController;
 use App\Http\Controllers\Admin\ProjectImportController;
-use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProjectController;
@@ -9,46 +9,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])
     ->name('home');
-
-/*
-Route::controller(ProjectController::class)->group(function () {
-
-    // show covers -- frontend
-    Route::get('/covers', 'coversIndex')
-        ->name('covers.index');
-    Route::get('/covers/{project:slug}', 'coverShow')
-        ->name('cover.show');
-
-    // show layouts -- frontend
-    Route::get('/layouts', 'layoutsIndex')
-        ->name('layouts.index');
-    Route::get('/layouts/{project:slug}', 'layoutShow')
-        ->name('layout.show');
-
-    // show eblasts -- frontend
-    Route::get('/eblasts', 'eblastsIndex')
-        ->name('eblasts.index');
-
-    // show projects -- backend
-    Route::get('/projects', 'projectsIndex')
-        ->name('projects.index');
-
-    // add a project -- backend
-    Route::get('/projects/create', 'create')
-        ->name('projects.create');
-    Route::post('/projects', 'store')
-        ->name('projects.store');
-
-    // delete a project -- backend
-    Route::delete('/projects/{project}', 'destroy')
-        ->name('projects.destroy');
-
-    // toggle "is_featured" -- backend
-    Route::patch('/projects/{project}/toggle-featured', 'toggleFeatured')
-        ->name('projects.toggleFeatured');
-
-});
-*/
 
 Route::controller(ProjectController::class)->group(function () {
 

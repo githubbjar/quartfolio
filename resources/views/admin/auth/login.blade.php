@@ -9,6 +9,21 @@
             <x-section.subtitle>For editing projects and reading messages.</x-section.subtitle>
         </x-section.header>
 
+        @if (session('error'))
+            <div
+            x-data="{ show: true }"
+            x-show="show"
+            x-transition
+            class="max-w-xl mx-auto mb-4 flex items-center justify-between rounded-none text-white bg-red-900 px-4 py-3 text-white-800 border"
+        >
+            <span>{{ session('error') }}</span>
+
+            <button @click="show = false" class="text-white hover:text-gray-600">
+                ✕
+            </button>
+        </div>
+         @endif
+
          @if (session('admin_logged_in'))
             <div
             x-data="{ show: true }"
