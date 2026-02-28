@@ -4,7 +4,7 @@
     
     <x-section.art-layout bg="graphics-bg" class="relative">
 
-        <div class="max-w-sm mx-auto lg:max-w-6xl md:max-w-3xl lg:-mt-32 md:-mt-26 -mt-36">
+        <div class="max-w-sm mx-auto lg:max-w-6xl md:max-w-3xl -mt-26">
             <div class="grid grid-cols-1 gap-6">
                 <img src="{{ $project->hero_url }}" alt="{{ $project->title }}" width="100%">
             </div>
