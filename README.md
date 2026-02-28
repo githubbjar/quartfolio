@@ -97,3 +97,25 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+## Clean Up DS_Store files in a project root
+
+macOS automatically creates .DS_Store files in directories. These files are harmless but can clutter a repository if accidentally committed.
+
+Prevent .DS_Store from being committed globally
+git config --global core.excludesfile ~/.gitignore_global
+echo ".DS_Store" >> ~/.gitignore_global
+Optional: Quick cleanup alias (macOS)
+
+Add this to your ~/.zshrc:
+
+alias cleanupds='find . -name ".DS_Store" -type f -delete'
+
+Then run:
+
+source ~/.zshrc
+
+Use it anytime from a project root:
+
+cleanupds
