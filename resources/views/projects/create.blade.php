@@ -81,10 +81,10 @@
                         required
                     >
                         <option value="">Select season</option>
-                        <option value="1" @selected(old('quarter') == 1)>Winter</option>
-                        <option value="2" @selected(old('quarter') == 2)>Spring</option>
-                        <option value="3" @selected(old('quarter') == 3)>Summer</option>
-                        <option value="4" @selected(old('quarter') == 4)>Fall</option>
+                        <option value="1" @selected(old('quarter') == 1)>1 Winter</option>
+                        <option value="2" @selected(old('quarter') == 2)>2 Spring</option>
+                        <option value="3" @selected(old('quarter') == 3)>3 Summer</option>
+                        <option value="4" @selected(old('quarter') == 4)>4 Fall</option>
                     </select>
                 </div>
             </div>
