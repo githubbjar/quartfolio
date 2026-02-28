@@ -13,7 +13,7 @@ class ProjectController extends Controller
     public function coversIndex()
     {
         $covers = Project::where('type', 'cover')
-            ->orderBy('created_at', 'desc')
+            ->orderByDesc('id')
             ->paginate(9);
 
         return view('covers.index', compact('covers'));
@@ -23,14 +23,16 @@ class ProjectController extends Controller
     {
         abort_unless($project->type === 'cover', 404);
 
+        // "Previous" in the index (id DESC) = higher id (newer insert)
         $previous = Project::where('type', 'cover')
-            ->where('created_at', '>', $project->created_at)
-            ->orderBy('created_at')
+            ->where('id', '>', $project->id)
+            ->orderBy('id')          // smallest id greater than current (closest previous)
             ->first();
 
+        // "Next" in the index (id DESC) = lower id
         $next = Project::where('type', 'cover')
-            ->where('created_at', '<', $project->created_at)
-            ->orderBy('created_at', 'desc')
+            ->where('id', '<', $project->id)
+            ->orderByDesc('id')      // largest id less than current (closest next)
             ->first();
 
         return view('covers.show', compact('project', 'previous', 'next'));
