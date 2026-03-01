@@ -42,24 +42,26 @@ class ProjectController extends Controller
     public function layoutsIndex()
     {
         $layouts = Project::where('type', 'layout')
-            ->orderBy('created_at', 'desc')
-            ->paginate(8);
+            ->orderByDesc('id')
+            ->paginate(9);
 
         return view('layouts.index', compact('layouts'));
     }
 
     public function layoutShow(Project $project)
     {
-        // Previous layout project
+        abort_unless($project->type === 'layout', 404);
+
+        // "Previous" in the index (id DESC) = higher id (newer insert)
         $previous = Project::where('type', 'layout')
-            ->where('id', '<', $project->id)
-            ->orderBy('id', 'desc')
+            ->where('id', '>', $project->id)
+            ->orderBy('id')          // smallest id greater than current (closest previous)
             ->first();
 
-        // Next layout project
+        // "Next" in the index (id DESC) = lower id
         $next = Project::where('type', 'layout')
-            ->where('id', '>', $project->id)
-            ->orderBy('id', 'asc')
+            ->where('id', '<', $project->id)
+            ->orderByDesc('id')      // largest id less than current (closest next)
             ->first();
 
         return view('layouts.show', compact('project', 'previous', 'next'));
