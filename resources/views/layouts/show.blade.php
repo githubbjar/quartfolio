@@ -22,7 +22,15 @@
                 @endif
             </div>
             <div class="bg-black text-white p-4 w-fit mx-auto" style="clip-path: polygon(0 0, 100% 0, 96% 100%, 4% 92%);">
-                <h1 class="tinos-regular text-center h1 text-2xl mb-2 font-bold">{{ $project->title }}</h1>
+                <h1 class="tinos-regular text-center text-2xl font-bold leading-tight">
+                    {{ $project->title }}
+                </h1>
+
+                @if($project->quarter && $project->year)
+                <p class="tinos-regular text-center text-md tracking-wide uppercase text-white">
+                    {{ $project->quarter_label }} {{ $project->year }}
+                </p>
+                @endif
             </div>
             <div class="flex">
                  @if ($next)
