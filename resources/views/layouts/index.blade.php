@@ -24,7 +24,7 @@
             
             </div>
             
-            <div class="flex justify-center mt-7">
+            <div class="flex justify-center mt-7 pb-10">
                     {{ $layouts->links() }}
             </div>
         

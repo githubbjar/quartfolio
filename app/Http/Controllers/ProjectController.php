@@ -43,7 +43,7 @@ class ProjectController extends Controller
     {
         $layouts = Project::where('type', 'layout')
             ->orderByDesc('id')
-            ->paginate(9);
+            ->paginate(8);
 
         return view('layouts.index', compact('layouts'));
     }
