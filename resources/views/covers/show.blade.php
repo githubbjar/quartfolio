@@ -18,7 +18,7 @@
             </div>
         </div>
 
-        
+        <div style="height: 150px;">
         <div class="grid grid-cols-[1fr_2fr_1fr] gap-6 md:max-w-3xl mx-auto mt-5">
             <div>
                 @if ($previous)
@@ -54,6 +54,7 @@
                 </a>
                 @endif
             </div>
+        </div>
         </div>
 
     </x-section.layout>

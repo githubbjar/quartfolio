@@ -4,13 +4,22 @@
     
     <x-section.art-layout bg="graphics-bg" class="relative">
 
-        <div class="max-w-sm mx-auto lg:max-w-6xl md:max-w-3xl -mt-26">
+        <div
+            class="max-w-sm mx-auto lg:max-w-6xl md:max-w-3xl lg:-mt-20 md:-mt-26 -mt-36
+                opacity-0 scale-95
+                animate-[fadeScale_0.6s_ease-out_0.2s_forwards]"
+        >
             <div class="grid grid-cols-1 gap-6">
-                <img src="{{ $project->hero_url }}" alt="{{ $project->title }}" width="100%">
+                <img
+                    src="{{ $project->hero_url }}"
+                    alt="{{ $project->title }}"
+                    class="w-full h-auto"
+                >
             </div>
         </div>
         
-        <div class="grid grid-cols-[1fr_2fr_1fr] gap-6 md:max-w-3xl mx-auto mt-5">
+        <div style="height: 150px;">
+        <div class="grid grid-cols-[1fr_2fr_1fr] gap-6 md:max-w-3xl mx-auto mt-5 mb-20 pb-20">
             <div>
                 @if ($previous)
                 <a class="btn-sm relative w-12 h-12 p-1 box-content flex items-center justify-center group bg-black hover:bg-gray-700 ml-2 rounded-none" href="{{ $previous->slug }}">
@@ -43,8 +52,9 @@
                 @endif
             </div>
         </div>
+        </div>
 
-    </x-section.layout>
+    </x-section.art-layout>
 
     
 
