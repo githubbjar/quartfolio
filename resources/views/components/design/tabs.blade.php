@@ -31,7 +31,7 @@
 
                 <x-design.button category="1">Covers</x-design.button>
                 <x-design.button category="2">Layouts</x-design.button>
-                <x-design.button category="3">Promotions</x-design.button>
+                <!--<x-design.button category="3">Promotions</x-design.button>-->
                 
             </div>
             
@@ -67,7 +67,7 @@
                     @endforeach
                 </div>
 
-                <!-- Promotions -->
+                
                 <div
                     x-show="['3'].includes(category)"
                     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
@@ -80,6 +80,8 @@
                         </div>
                     @endforeach
                 </div>
+
+                
 
                 
 
