@@ -38,23 +38,36 @@ Route::controller(ProjectController::class)->group(function () {
 
 });
 
-Route::prefix('admin')->controller(ProjectController::class)->group(function () {
+Route::middleware('admin.auth')
+    ->prefix('admin')
+    ->group(function () {
 
-    Route::get('/projects', 'projectsIndex')
-        ->name('admin.projects.index');
-    Route::get('/projects/create', 'create')->name('admin.projects.create');
-    Route::post('/projects', 'store')->name('admin.projects.store');
+        // ProjectController routes
+        Route::controller(ProjectController::class)->group(function () {
+            Route::get('/projects', 'projectsIndex')
+                ->name('admin.projects.index');
 
-    Route::delete('/projects/{project}', 'destroy')->name('admin.projects.destroy');
-    Route::patch('/projects/{project}/toggle-featured', 'toggleFeatured')
-        ->name('admin.projects.toggleFeatured');
+            Route::get('/projects/create', 'create')
+                ->name('admin.projects.create');
 
-});
+            Route::post('/projects', 'store')
+                ->name('admin.projects.store');
 
-Route::post('/admin/projects/import', ProjectImportController::class)
-    ->name('admin.projects.import');
+            Route::delete('/projects/{project}', 'destroy')
+                ->name('admin.projects.destroy');
 
-Route::controller(MessageController::class)->group(function () {
+            Route::patch('/projects/{project}/toggle-featured', 'toggleFeatured')
+                ->name('admin.projects.toggleFeatured');
+        });
+
+        // Import route (different controller)
+        Route::post('/projects/import', ProjectImportController::class)
+            ->name('admin.projects.import');
+    });
+
+Route::middleware('admin.auth')
+    ->controller(MessageController::class)
+    ->group(function () {
 
     // show messages -- backend
     Route::get('/messages', 'messagesIndex')
@@ -88,9 +101,9 @@ Route::post('/admin', [AdminAuthController::class, 'login'])
     ->name('admin.login.post')
     ->middleware('throttle:10,1'); // optional but smart
 
-// handle logout
 Route::post('/admin/logout', [AdminAuthController::class, 'logout'])
-    ->name('admin.logout');
+    ->name('admin.logout')
+    ->middleware('admin.auth');
 
 Route::get('/appy', function () {
     return view('appy');
