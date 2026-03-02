@@ -65,21 +65,14 @@ Route::middleware('admin.auth')
             ->name('admin.projects.import');
     });
 
-    Route::controller(MessageController::class)->group(function () {
-    Route::get('/messages/send', 'create')
-        ->name('message.send');
+    Route::controller(MessageController::class)
+        ->group(function () {
+        Route::get('/messages/send', 'create')
+            ->name('message.send');
 
-    Route::post('/messages', 'store')
-        ->name('messages.store');
-});
-
-Route::controller(MessageController::class)->group(function () {
-    Route::get('/messages/send', 'create')
-        ->name('message.send');
-
-    Route::post('/messages', 'store')
-        ->name('messages.store');
-});
+        Route::post('/messages', 'store')
+            ->name('messages.store');
+    });
 
 Route::middleware('admin.auth')
     ->controller(MessageController::class)
