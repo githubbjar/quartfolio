@@ -21,6 +21,14 @@ class MessageController extends Controller
 
     public function store(Request $request)
     {
+
+        if ($request->filled('company')) {
+        // Pretend it worked so bots don't learn
+        return redirect()
+            ->route('home')
+            ->with('success', 'Message sent successfully.');
+        }
+
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',

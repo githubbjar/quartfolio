@@ -65,6 +65,22 @@ Route::middleware('admin.auth')
             ->name('admin.projects.import');
     });
 
+    Route::controller(MessageController::class)->group(function () {
+    Route::get('/messages/send', 'create')
+        ->name('message.send');
+
+    Route::post('/messages', 'store')
+        ->name('messages.store');
+});
+
+Route::controller(MessageController::class)->group(function () {
+    Route::get('/messages/send', 'create')
+        ->name('message.send');
+
+    Route::post('/messages', 'store')
+        ->name('messages.store');
+});
+
 Route::middleware('admin.auth')
     ->controller(MessageController::class)
     ->group(function () {
@@ -72,12 +88,6 @@ Route::middleware('admin.auth')
     // show messages -- backend
     Route::get('/messages', 'messagesIndex')
         ->name('messages.index');
-
-    // send (create) a message -- backend
-    Route::get('/messages/send', 'create')
-        ->name('message.send');
-    Route::post('/messages', 'store')
-        ->name('messages.store');
 
     // delete a message -- backend
     Route::delete('/messages/{message}', 'destroy')

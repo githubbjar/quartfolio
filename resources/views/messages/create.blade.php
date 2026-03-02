@@ -108,6 +108,19 @@
                 </button>
             </div>
 
+            {{-- Honeypot --}}
+            <div class="hidden">
+                <label for="company">Company</label>
+                <input
+                    type="text"
+                    name="company"
+                    id="company"
+                    value=""
+                    tabindex="-1"
+                    autocomplete="off"
+                >
+            </div>
+
         </form>
     </div>
     </x-section.art-layout>
