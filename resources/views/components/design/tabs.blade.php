@@ -1,4 +1,4 @@
-<x-section.layout bg="graphics-bg">
+<x-section.layout bg="graphics-bg" id="design">
 
     @if (session('success'))
         <div

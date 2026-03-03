@@ -38,16 +38,13 @@
                     <ul class="flex grow flex-wrap items-center font-medium">
                         
                         <li>
-                            <a class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="{{ route('covers.index') }}">Covers</a>
+                            <a class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="#design">/ Graphic Design</a>
                         </li>
                         <li>
-                            <a class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="{{ route('layouts.index') }}">Layouts</a>
+                            <a class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="#development">/ Web Development</a>
                         </li>
                         <li>
-                            <a class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="{{ route('promotions.index') }}">Promotions</a>
-                        </li>
-                        <li>
-                            <a class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="{{ route('eblasts.index') }}">Eblasts</a>
+                            <a class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="#blasts">/ Email Marketing</a>
                         </li>
 
                         @if (session('admin_logged_in'))
@@ -60,7 +57,7 @@
                                     @click.away="open = false"
                                     class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out"
                                 >
-                                    Admin
+                                    / Admin
                                     <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M19 9l-7 7-7-7" />
@@ -75,12 +72,12 @@
                                 >
                                     <a class="block px-5 py-2 hover:bg-gray-100"
                                     href="{{ route('admin.projects.index') }}">
-                                        Projects
+                                        -> Projects
                                     </a>
 
                                     <a class="block px-5 py-2 hover:bg-gray-100"
                                     href="{{ route('messages.index') }}">
-                                        Messages
+                                        -> Messages
                                     </a>
 
                                     <form method="POST" action="{{ route('admin.logout') }}">
@@ -89,7 +86,7 @@
                                             type="submit"
                                             class="block w-full text-left px-5 py-2 hover:bg-gray-100"
                                         >
-                                            Logout
+                                            X Logout
                                         </button>
                                     </form>
                                 </div>
@@ -148,17 +145,15 @@
                             <!-- Links -->
                             <ul>
                                 <li>
-                                    <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('covers.index') }}">Covers</a>
+                                    <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="#design">/ Graphic Design</a>
                                 </li>
                                 <li>
-                                    <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('layouts.index') }}">Layouts</a>
+                                    <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="#development">/ Web Development</a>
                                 </li>
                                 <li>
-                                    <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('promotions.index') }}">Promotions</a>
+                                    <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="#blasts">/ Email Marketing</a>
                                 </li>
-                                <li>
-                                    <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('eblasts.index') }}">Eblasts</a>
-                                </li>
+                                
                                 <li>
                                 <a class="font-bold btn-sm text-white bg-black hover:bg-gray-700 mt-3 mb-6" href="contact.html">Contact</a>
                             </li>
@@ -166,11 +161,11 @@
                             @if (session('admin_logged_in'))
 
                             <li>
-                                <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('admin.projects.index') }}">Projects</a>
+                                <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('admin.projects.index') }}">-> Projects</a>
                             </li>
 
                             <li>
-                                <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('messages.index') }}">Messages</a>
+                                <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('messages.index') }}">-> Messages</a>
                             </li>
 
                             <li>
@@ -180,7 +175,7 @@
                                         type="submit"
                                         class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2 w-full text-left"
                                     >
-                                        Logout
+                                        X Logout
                                     </button>
                                 </form>
                             </li>

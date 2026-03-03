@@ -1,4 +1,4 @@
-<x-section.layout bg="blast-bg">
+<x-section.layout bg="blast-bg" id="blasts">
 
     <x-section.header>
         <x-section.title>Email Marketing</x-section.title>
