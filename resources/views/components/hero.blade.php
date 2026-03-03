@@ -20,7 +20,7 @@
                             opacity-0 translate-y-3
                             animate-[fadeUp_0.7s_ease-out_0.25s_forwards]"
                     >
-                    <span class="font-bold">Jerry M. Janquart</span> — Design / Development
+                    Creative Direction & Execution by <span class="font-bold">Jerry M. Janquart</span>
                 </p>
             </div>
 
