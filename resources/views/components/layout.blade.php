@@ -38,13 +38,13 @@
                     <ul class="flex grow flex-wrap items-center font-medium">
                         
                         <li>
-                            <a class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="#design">/ Graphic Design</a>
+                            <a class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="{{ url('/#design') }}">/ Graphic Design</a>
                         </li>
                         <li>
-                            <a class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="#development">/ Web Development</a>
+                            <a class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="{{ url('/#development') }}">/ Web Development</a>
                         </li>
                         <li>
-                            <a class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="#blasts">/ Email Marketing</a>
+                            <a class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="{{ url('/#blasts') }}">/ Email Marketing</a>
                         </li>
 
                         @if (session('admin_logged_in'))
