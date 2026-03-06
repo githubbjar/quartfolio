@@ -209,6 +209,22 @@
 
     <!-- JS handled through Vite -->
 
+    <!-- Smooth scroll to anchor on page load -->
+    <script>
+        window.addEventListener("load", function () {
+            if (window.location.hash) {
+                const el = document.querySelector(window.location.hash);
+
+                if (el) {
+                    window.scrollTo(0, 0);
+
+                    setTimeout(() => {
+                        el.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }, 150);
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
