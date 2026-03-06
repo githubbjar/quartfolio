@@ -4,21 +4,8 @@
     
     <x-section.art-layout bg="graphics-bg" class="relative">
 
-        <div
-            class="max-w-sm mx-auto md:max-w-3xl lg:-mt-32 md:-mt-26 -mt-36
-                opacity-0 scale-95
-                animate-[fadeScale_0.6s_ease-out_0.2s_forwards]"
-        >
-            <div class="grid grid-cols-1 gap-6">
-                <img
-                    src="{{ $project->hero_url }}"
-                    alt="{{ $project->title }}"
-                    class="w-full h-auto"
-                >
-            </div>
-        </div>
 
-        <div style="height: 150px;">
+        <div class="-mt-20">
         <div class="grid grid-cols-[1fr_2fr_1fr] gap-6 md:max-w-3xl mx-auto mt-5">
             <div>
                 @if ($previous)
@@ -56,6 +43,41 @@
             </div>
         </div>
         </div>
+
+
+        <div
+            class="max-w-sm mx-auto md:max-w-3xl
+                opacity-0 scale-95
+                animate-[fadeScale_0.6s_ease-out_0.2s_forwards]"
+        >
+            <div class="grid grid-cols-1 gap-6">
+                <img
+                    src="{{ $project->hero_url }}"
+                    alt="{{ $project->title }}"
+                    class="w-full h-auto"
+                >
+            </div>
+        </div>
+
+        <p class="text-center text-sm uppercase tracking-widest text-gray-700 mb-4">
+            Project Overview
+        </p>
+
+        <div class="mx-auto lg:max-w-2xl px-4 pb-10">
+            <p class="tinos-regular text-center text-2xl font-bold leading-tight">
+                {{ $project->description }}
+            </p>
+             <div class="flex justify-center mt-12">
+                <div
+                    class="w-40 h-[10px] bg-black"
+                    style="clip-path: polygon(8% 100%, 0% 100%, 6% 0%, 100% 20%, 100% 100%);"
+                ></div>
+            </div>
+        </div>
+
+       
+
+        
 
     </x-section.layout>
 
