@@ -17,10 +17,9 @@
                 </a>
                 @endif
             </div>
-           <div
-            class="bg-black text-white p-4 w-fit mx-auto"
-            style="clip-path: polygon(0 0, 100% 0, 96% 100%, 4% 92%);"
-            >
+           <div class="bg-black text-white p-4 w-fit mx-auto"
+                style="clip-path: polygon(0 0, 100% 0, 98% 100%, 2% 96%);">
+
                 <h1 class="tinos-regular text-center text-2xl font-bold leading-tight">
                     {{ $project->title }}
                 </h1>
@@ -30,6 +29,7 @@
                     {{ $project->quarter_label }} {{ $project->year }}
                 </p>
                 @endif
+
             </div>
             <div class="flex">
                  @if ($next)
@@ -67,7 +67,7 @@
             <p class="tinos-regular text-center text-2xl font-bold leading-tight">
                 {{ $project->description }}
             </p>
-             <div class="flex justify-center mt-12">
+            <div class="flex justify-center mt-12">
                 <div
                     class="w-40 h-[10px] bg-black"
                     style="clip-path: polygon(8% 100%, 0% 100%, 6% 0%, 100% 20%, 100% 100%);"
