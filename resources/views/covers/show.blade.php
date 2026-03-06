@@ -46,7 +46,7 @@
 
 
         <div
-            class="max-w-sm mx-auto md:max-w-3xl
+            class="max-w-sm mx-auto md:max-w-4xl
                 opacity-0 scale-95
                 animate-[fadeScale_0.6s_ease-out_0.2s_forwards]"
         >
