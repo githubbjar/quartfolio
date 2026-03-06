@@ -4,7 +4,7 @@
     
     <x-section.art-layout bg="graphics-bg">
         @if ($covers->onFirstPage())
-        <section class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center -mt-30 mb-6">
+        <section class="max-w-6xl mx-auto px-6 grid md:grid-cols-[1fr_2fr] gap-12 items-center -mt-20 mb-6">
 
             <!-- LEFT COLUMN -->
             <x-section.header>
@@ -33,8 +33,8 @@
             <!-- RIGHT COLUMN -->
             <div class="flex justify-center md:justify-end">
                 <img 
-                    src="{{ $featuredCover->hero_url }}" alt="{{ $featuredCover->title }}" 
-                    class="max-w-sm md:max-w-md lg:max-w-lg rotate-1"
+                    src="{{ asset('images/covers-index.webp') }}" alt="Featured Covers" 
+                    class="w-full rotate-1"
                 >
             </div>
 
