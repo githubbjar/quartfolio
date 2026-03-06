@@ -50,7 +50,12 @@ class ProjectController extends Controller
             ->orderByDesc('id')
             ->paginate(8);
 
-        return view('layouts.index', compact('layouts'));
+            $featuredLayout = Project::where('type', 'layout')
+            ->where('is_featured', 1)
+            ->inRandomOrder()
+            ->first();
+
+        return view('layouts.index', compact('layouts', 'featuredLayout'));
     }
 
     public function layoutShow(Project $project)

@@ -3,8 +3,8 @@
     <x-hero />
     
     <x-section.art-layout bg="graphics-bg">
-        
-        <section class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center -mt-30 mb-16">
+        @if ($covers->onFirstPage())
+        <section class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center -mt-30 mb-6">
 
             <!-- LEFT COLUMN -->
             <x-section.header>
@@ -40,9 +40,10 @@
 
             
         </section>
+        @endif
         
 
-        <div class="mx-auto lg:max-w-6xl md:max-w-5xl max-w-2xl px-10 lg:px-1">
+        <div class="mx-auto lg:max-w-6xl md:max-w-5xl max-w-2xl px-10 lg:px-1 pt-10">
             <div class="stagger-grid grid md:grid-cols-3 gap-6">
                 
                 @foreach ($covers as $cover)

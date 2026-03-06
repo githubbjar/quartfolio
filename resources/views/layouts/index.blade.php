@@ -3,13 +3,52 @@
     <x-hero />
     
     <x-section.art-layout bg="graphics-bg">
-        <x-section.header>
-            <x-section.title>Graphic Design / Layouts</x-section.title>
-            <x-section.subtitle>Twenty years in magazine and book publishing creating on-brand visuals that elevate the message.</x-section.subtitle>
-            <x-section.tools>InDesign, Photoshop, Illustrator, Word</x-section.tools>
-        </x-section.header>
+        
+        
+        @if ($layouts->onFirstPage())
 
-        <div class="mx-auto lg:max-w-6xl md:max-w-5xl max-w-2xl px-10 lg:px-1">
+        <section class="max-w-6xl mx-auto px-6 grid md:grid-cols-[1fr_2fr] gap-12 items-center -mt-20 mb-6">
+
+            <!-- LEFT COLUMN -->
+            <x-section.header>
+
+                <p class="text-center text-md uppercase tracking-widest text-gray-700 mb-4 mt-30">
+                    Graphic Design
+                </p>
+
+                <div class="">
+                    <h2 class="tinos-regular h2 mb-4 uppercase">Layouts</h2>
+                </div>
+
+                <p class="tinos-regular text-center text-2xl font-bold leading-tight">
+                    Feature spreads and editorial layouts designed to present complex topics with clarity, structure, and visual rhythm.
+                </p>
+
+                <div class="flex justify-center mt-12">
+                <div
+                    class="w-40 h-[10px] bg-black"
+                    style="clip-path: polygon(8% 100%, 0% 100%, 6% 0%, 100% 20%, 100% 100%);"
+                ></div>
+            </div>
+
+            </x-section.header>
+
+            <!-- RIGHT COLUMN -->
+            <div class="flex justify-center md:justify-end">
+                <img 
+                    src="{{ $featuredLayout->hero_url }}" alt="{{ $featuredLayout->title }}" 
+                    class="w-full rotate-1"
+                >
+            </div>
+
+            
+        </section>
+        @endif
+
+
+
+
+        <div class="mx-auto lg:max-w-6xl md:max-w-5xl max-w-2xl px-10 lg:px-1 pt-10">
             <div class="stagger-grid grid md:grid-cols-2 gap-6">
                 
                 @foreach ($layouts as $layout)
