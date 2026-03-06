@@ -15,8 +15,13 @@ class ProjectController extends Controller
         $covers = Project::where('type', 'cover')
             ->orderByDesc('id')
             ->paginate(9);
+            
+            $featuredCover = Project::where('type', 'cover')
+            ->where('is_featured', 1)
+            ->inRandomOrder()
+            ->first();
 
-        return view('covers.index', compact('covers'));
+        return view('covers.index', compact('covers', 'featuredCover'));
     }
 
     public function coverShow(Project $project)
