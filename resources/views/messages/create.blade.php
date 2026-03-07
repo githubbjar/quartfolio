@@ -25,7 +25,7 @@
                 </p>
 
                 <div class="">
-                    <h2 class="tinos-regular h2 mb-4 uppercase">Let's Connect</h2>
+                    <h2 class="tinos-regular h2 mb-4 uppercase leading-none tracking-wide">Let's Connect</h2>
                 </div>
 
                 <p class="tinos-regular text-center text-2xl font-bold leading-tight">
