@@ -23,7 +23,7 @@
 
                 <div class="flex justify-center mt-12">
                 <div
-                    class="w-40 h-[10px] bg-black"
+                    class="w-40 h-2.5 bg-black"
                     style="clip-path: polygon(8% 100%, 0% 100%, 6% 0%, 100% 20%, 100% 100%);"
                 ></div>
             </div>
