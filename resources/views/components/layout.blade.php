@@ -17,10 +17,10 @@
 <body class="font-inter antialiased text-gray-900 bg-gray-900 tracking-tight">
     
     <!-- Page wrapper -->
-    <div class="min-h-screen max-w-[1400px] mx-auto pt-8">
+    <div class="min-h-screen max-w-7xl mx-auto pt-8">
 
     <!-- Site header -->
-    <header class="absolute w-full z-30 max-w-[1400px] mx-auto px-15">
+    <header class="absolute w-full z-30 max-w-7xl mx-auto px-15">
 
         <div class="max-w-6xl mx-auto">
             <div class="flex items-center justify-between h-20">

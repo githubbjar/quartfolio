@@ -3,12 +3,45 @@
     <x-hero />
 
     <x-section.art-layout bg="blast-bg">
+
+        <section class="max-w-6xl mx-auto px-6 grid md:grid-cols-[1fr_2fr] gap-12 items-center -mt-20 mb-6">
+
+            <!-- LEFT COLUMN -->
+            <x-section.header>
+
+                <p class="text-center text-md uppercase tracking-widest text-gray-700 mb-4 mt-20">
+                    Marketing
+                </p>
+
+                <div class="">
+                    <h2 class="tinos-regular h2 mb-4 uppercase">Eblasts</h2>
+                </div>
+
+                <p class="tinos-regular text-center text-2xl font-bold leading-tight">
+                    Promotions, announcements, fundraising, sales & more! Compelling blasts that deliver.
+                </p>
+
+                <div class="flex justify-center mt-12">
+                <div
+                    class="w-40 h-2.5 bg-black"
+                    style="clip-path: polygon(8% 100%, 0% 100%, 6% 0%, 100% 20%, 100% 100%);"
+                ></div>
+            </div>
+
+            </x-section.header>
+
+            <!-- RIGHT COLUMN -->
+            <div class="flex justify-center md:justify-end">
+                <img 
+                    src="{{ asset('images/eblasts-index.webp') }}" alt="Featured eblast" 
+                    class="w-full rotate-1"
+                >
+            </div>
+
+            
+        </section>
     
-        <x-section.header>
-            <x-section.title>Email Marketing</x-section.title>
-            <x-section.subtitle>Promotions, announcements, fundraising, sales & more! Compelling blasts that deliver.</x-section.subtitle>
-            <x-section.tools>Constant Contact, Mail Chimp, Photoshop</x-section.tools>
-        </x-section.header>
+        
 
         <div class="mx-auto lg:max-w-6xl md:max-w-5xl max-w-2xl px-10 lg:px-1 pt-10 pb-10">
             <div class="stagger-grid grid md:grid-cols-3 gap-x-6 gap-y-12">
