@@ -3,7 +3,7 @@
     <x-section.header>
         <x-section.title>Web Development</x-section.title>
         <x-section.subtitle>Full Stack. From page to screen&#8212;current tools, professional workflow.</x-section.subtitle>
-        <x-section.tools>PHP/MySQL, Laravel Ecosystem, Git, VS Code, Shopify, Google Analytics, Vite, Tailwind, Bootstrap, Chat GPT</x-section.tools>
+        <x-section.tools>PHP/MySQL, Laravel Ecosystem, Git, VS Code, Shopify, Google Analytics, Vite, Tailwind, Bootstrap, AI-assisted development</x-section.tools>
     </x-section.header>
 
     <!-- Carousel built with Swiper.js [https://swiperjs.com/] -->
