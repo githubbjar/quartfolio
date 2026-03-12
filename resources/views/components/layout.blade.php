@@ -20,22 +20,22 @@
     <div class="min-h-screen max-w-7xl mx-auto">
 
     <!-- Site header -->
-    <header class="absolute w-full z-30 max-w-7xl mx-auto px-15">
+    <header class="absolute w-full z-30 max-w-7xl mx-auto">
 
-        <div class="max-w-6xl mx-auto">
-            <div class="flex items-center justify-between h-20">
+        <div class="max-w-6xl mx-auto flex items-center justify-between h-20">
+            
 
                 <!-- Site branding -->
-                <div class="shrink-0 bg-black hover:bg-gray-500 btn-sm rounded-none">
+                <div class="shrink-0 bg-black hover:bg-gray-500 btn-sm rounded-none mr-10">
                     <!-- Logo -->
                     <a href="{{ route('home') }}"><i class="fa-solid fa-folder-open text-white"></i></a>
                 </div>
 
                 <!-- Desktop navigation -->
-                <nav class="hidden md:flex md:grow px-6">
+                <nav class="hidden md:flex md:grow">
 
                     <!-- Desktop menu links -->
-                    <ul class="flex grow flex-wrap items-center font-medium">
+                    <ul class="flex grow flex-wrap items-center font-medium gap-4">
                         
                         <li x-data="{ open: false }" class="relative">
                                 
@@ -220,7 +220,7 @@
 
                 </div>
 
-            </div>
+            
         </div>
     </header>
 

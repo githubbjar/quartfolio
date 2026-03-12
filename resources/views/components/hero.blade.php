@@ -1,26 +1,23 @@
-<!-- Hero -->
-<section class="hero pt-26 pb-26 mx-5 px-4">
-        
-        <!-- Hero content -->
-        <div class="md:grid md:grid-cols-12 md:gap-12 lg:gap-20 items-center lg:pl-20">
+<section class="hero flex items-center px-4 h-96 pb-6">
 
-            <!-- Content -->
-            <div class="lg:col-span-6 md:col-span-7 mb-8 md:mb-0 text-center md:text-left">
-                <h1 class="tinos-regular text-center text-[4.9rem] md:text-[6.8rem]
-                            opacity-0 translate-y-6 animate-[fadeUp_0.8s_ease-out_forwards]"
-                    >
-                    Quartfolio
-                </h1>
+    <div class="md:grid md:grid-cols-12 items-center w-full">
 
-                <p
-                    class="text-xl text-white bg-black text-center mt-7
-                            opacity-0 translate-y-3
-                            animate-[fadeUp_0.7s_ease-out_0.25s_forwards]"
-                    >
-                    Creative Direction & Execution by <span class="font-bold">Jerry M. Janquart</span>
-                </p>
-            </div>
+        <div class="md:col-start-2 md:col-span-5 text-center">
+
+            <h1 class="tinos-regular text-[4.9rem] md:text-[7rem] opacity-0 translate-y-6 animate-[fadeUp_0.8s_ease-out_forwards]">
+                Quartfolio
+            </h1>
+
+            <p class="[clip-path:polygon(0_0,100%_0,95%_100%,0_100%)] text-xl text-white bg-black mt-2
+                      w-[70%] mx-auto py-4
+                      opacity-0 translate-y-3
+                      animate-[fadeUp_0.7s_ease-out_0.25s_forwards]">
+                <span class="font-bold">Creative Direction & Execution</span><br>
+                by Jerry M. Janquart
+            </p>
 
         </div>
+
+    </div>
 
 </section>
