@@ -1,15 +1,12 @@
 <!-- Hero -->
-<section class="hero">
-
-    <div class="mx-5 px-4 pt-26 pb-26">
+<section class="hero pt-26 pb-26 mx-5 px-4">
         
         <!-- Hero content -->
         <div class="md:grid md:grid-cols-12 md:gap-12 lg:gap-20 items-center lg:pl-20">
 
             <!-- Content -->
             <div class="lg:col-span-6 md:col-span-7 mb-8 md:mb-0 text-center md:text-left">
-                <h1
-                    class="tinos-regular text-center h1 text-6xl lg:text-9xl md:text-8xl mb-4 font-red-hat-display font-black
+                <h1 class="tinos-regular text-center text-[4.9rem] md:text-[6.8rem]
                             opacity-0 translate-y-6 animate-[fadeUp_0.8s_ease-out_forwards]"
                     >
                     Quartfolio
@@ -25,7 +22,5 @@
             </div>
 
         </div>
-
-    </div>
 
 </section>
