@@ -7,12 +7,12 @@
         
         @if ($layouts->onFirstPage())
 
-        <section class="max-w-6xl mx-auto px-6 grid md:grid-cols-[1fr_2fr] gap-12 items-center -mt-20 mb-6">
+        <section class="max-w-6xl mx-auto px-6 py-6 grid md:grid-cols-[1fr_2fr] gap-12 items-center">
 
             <!-- LEFT COLUMN -->
             <x-section.header>
 
-                <p class="text-center text-md uppercase tracking-widest text-gray-700 mb-4 mt-30">
+                <p class="text-center text-md uppercase tracking-widest text-gray-700">
                     Graphic Design
                 </p>
 
@@ -26,7 +26,7 @@
 
                 <div class="flex justify-center mt-12">
                 <div
-                    class="w-40 h-[10px] bg-black"
+                    class="w-40 h-2.5 bg-black"
                     style="clip-path: polygon(8% 100%, 0% 100%, 6% 0%, 100% 20%, 100% 100%);"
                 ></div>
             </div>

@@ -4,12 +4,12 @@
 
     <x-section.art-layout bg="blast-bg">
 
-        <section class="max-w-6xl mx-auto px-6 grid md:grid-cols-[1fr_2fr] gap-12 items-center -mt-20 mb-6">
+        <section class="max-w-6xl mx-auto px-6 py-6 grid md:grid-cols-[1fr_2fr] gap-12 items-center">
 
             <!-- LEFT COLUMN -->
             <x-section.header>
 
-                <p class="text-center text-md uppercase tracking-widest text-gray-700 mb-4 mt-20">
+                <p class="text-center text-md uppercase tracking-widest text-gray-700">
                     Marketing
                 </p>
 
