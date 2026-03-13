@@ -23,29 +23,40 @@
     <header class="absolute w-full z-30 max-w-7xl mx-auto">
 
         <div class="max-w-6xl mx-auto flex items-center justify-between h-20">
-            
-
-                <!-- Site branding -->
-                <div class="shrink-0 bg-black hover:bg-gray-500 btn-sm rounded-none mr-10">
-                    <!-- Logo -->
-                    <a href="{{ route('home') }}"><i class="fa-solid fa-folder-open text-white"></i></a>
-                </div>
+        
+        <!-- Site branding -->    
+        <div class="ml-4 shrink-0 bg-black hover:bg-gray-500 btn-sm rounded-none mr-10 md:hidden">
+            <a href="{{ route('home') }}">
+                <i class="fa-solid fa-folder-open text-white"></i>
+            </a>
+        </div>
+                
 
                 <!-- Desktop navigation -->
                 <nav class="hidden md:flex md:grow">
 
+                    <!-- Site branding -->
+                    <div class="ml-4 shrink-0 bg-black hover:bg-gray-500 btn-sm rounded-none mr-10 hidden md:block">
+                        <a href="{{ route('home') }}">
+                            <i class="fa-solid fa-folder-open text-white"></i>
+                        </a>
+                    </div>
+
                     <!-- Desktop menu links -->
-                    <ul class="flex grow flex-wrap items-center font-medium gap-4">
+                    <ul class="flex grow flex-wrap items-center font-medium">
                         
+                        
+
                         <li x-data="{ open: false }" class="relative">
                                 
                             <!-- Trigger -->
                             <button 
                                 @click="open = !open"
                                 @click.away="open = false"
-                                class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out"
+                                class="text-black hover:text-gray-600 md:px-5 py-2 flex items-center transition duration-150 ease-in-out"
                             >
-                                / Graphic Design
+                                    <span class="lg:hidden">/ Design</span>
+                                    <span class="hidden lg:inline">/ Graphic Design</span>
                                 <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M19 9l-7 7-7-7" />
@@ -70,10 +81,16 @@
                             </div>
                         </li>
                         <li>
-                            <a class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="{{ url('/#development') }}">/ Web Development</a>
+                            <a class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="{{ url('/#development') }}">
+                                <span class="lg:hidden">/ Development</span>
+                                <span class="hidden lg:inline">/ Web Development</span>
+                            </a>
                         </li>
                         <li>
-                            <a class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="{{ url('/#blasts') }}">/ Email Marketing</a>
+                            <a class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="{{ url('/#blasts') }}">
+                                <span class="lg:hidden">/ Marketing</span>
+                                <span class="hidden lg:inline">/ Email Marketing</span>
+                            </a>
                         </li>
 
                         @if (session('admin_logged_in'))
@@ -126,7 +143,7 @@
 
                     </ul>
 
-                    <ul class="flex justify-end flex-wrap items-center pr-2">
+                    <ul class="flex justify-end flex-wrap items-center pr-2 mr-4">
                         <li>
                             <a class="font-bold btn-sm text-white bg-black hover:bg-gray-500 ml-6 rounded-none" href="{{ route('message.send') }}">Contact</a>
                         </li>
@@ -135,7 +152,7 @@
                 </nav>
                 
                 <!-- Mobile menu -->
-                <div class="inline-flex md:hidden" x-data="{ expanded: false }">
+                <div class="inline-flex md:hidden ml-auto" x-data="{ expanded: false }">
 
                     <!-- Hamburger button -->
                     <button
@@ -169,12 +186,22 @@
                         x-cloak
                     >
                         <div class="py-6 pr-4 pl-20">
-                            <!-- Logo -->
-                            <i class="fa-solid fa-folder-open"></i>
+                            <!-- Site branding -->    
+                            <div class="mb-4 shrink-0 bg-black hover:bg-gray-500 btn-sm rounded-none mr-10 md:hidden">
+                                <a href="{{ route('home') }}">
+                                    <i class="fa-solid fa-folder-open text-white"></i>
+                                </a>
+                            </div>
                             <!-- Links -->
                             <ul>
                                 <li>
                                     <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="#design">/ Graphic Design</a>
+                                </li>
+                                <li class="ml-4">
+                                    <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('covers.index') }}">-> Covers</a>
+                                </li>
+                                <li class="ml-4">
+                                    <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('layouts.index') }}">-> Layouts</a>
                                 </li>
                                 <li>
                                     <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="#development">/ Web Development</a>
@@ -184,20 +211,24 @@
                                 </li>
                                 
                                 <li>
-                                <a class="font-bold btn-sm text-white bg-black hover:bg-gray-700 mt-3 mb-6" href="contact.html">Contact</a>
+                                <a class="font-bold btn-sm text-white bg-black hover:bg-gray-700 mt-3 mb-6 rounded-none" href="{{ route('message.send') }}">Contact</a>
                             </li>
 
                             @if (session('admin_logged_in'))
 
                             <li>
+                                <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('admin.login') }}">/ Admin</a>
+                            </li>
+
+                            <li class="ml-4">
                                 <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('admin.projects.index') }}">-> Projects</a>
                             </li>
 
-                            <li>
+                            <li class="ml-4">
                                 <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('messages.index') }}">-> Messages</a>
                             </li>
 
-                            <li>
+                            <li class="ml-4">
                                 <form method="POST" action="{{ route('admin.logout') }}">
                                     @csrf
                                     <button

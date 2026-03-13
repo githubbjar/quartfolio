@@ -14,34 +14,36 @@
         @endif
     
 
-        <section class="max-w-6xl mx-auto px-6 grid md:grid-cols-[1fr_2fr] gap-12 items-center -mt-20 pb-24">
+        <section class="max-w-6xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center pb-24 -mt-20">
         
         <!-- Left Column -->
-        
-        <x-section.header>
+        <div class="md:col-span-7">
+            <x-section.header>
 
-                <p class="text-center text-md uppercase tracking-widest text-gray-700 mb-4 mt-10">
-                    Contact 
-                </p>
+                    <p class="text-center text-md uppercase tracking-widest text-gray-700 mb-4 mt-10">
+                        Contact 
+                    </p>
 
-                <div class="">
-                    <h2 class="tinos-regular h2 mb-4 uppercase leading-none tracking-wide">Let's Connect</h2>
+                    <div class="">
+                        <h2 class="tinos-regular h2 mb-4 uppercase leading-none tracking-wide">Let's Connect</h2>
+                    </div>
+
+                    <p class="tinos-regular text-center text-2xl font-bold leading-tight">
+                        I'd love to help you with your next project! Please fill out the form and I'll get back to you as soon as possible.
+                    </p>
+
+                    <div class="flex justify-center mt-12">
+                    <div
+                        class="w-40 h-2.5 bg-black"
+                        style="clip-path: polygon(8% 100%, 0% 100%, 6% 0%, 100% 20%, 100% 100%);"
+                    ></div>
                 </div>
 
-                <p class="tinos-regular text-center text-2xl font-bold leading-tight">
-                    I'd love to help you with your next project! Please fill out the form and I'll get back to you as soon as possible.
-                </p>
-
-                <div class="flex justify-center mt-12">
-                <div
-                    class="w-40 h-[10px] bg-black"
-                    style="clip-path: polygon(8% 100%, 0% 100%, 6% 0%, 100% 20%, 100% 100%);"
-                ></div>
+                </x-section.header>
             </div>
-
-            </x-section.header>
         
         <!-- Right Column -->
+    <div class="md:col-span-5">
         
             <form
     action="{{ route('messages.store') }}"
@@ -141,7 +143,7 @@
         >
     </div>
 </form>
-        
+</div>
         
     </x-section.art-layout>
 </x-layout>

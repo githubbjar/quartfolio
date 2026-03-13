@@ -1,6 +1,6 @@
 <x-layout title="Messages - Quartfolio: Jerry M. Janquart Design and Development Portfolio">
     <x-hero />
-    <x-section.art-layout bg="graphics-bg">
+    <x-section.art-layout bg="graphics-bg pb-20">
         <x-section.header>
 
                 @if (session('success'))
