@@ -1,1 +1,1 @@
-<p class="text-xl text-black font-bold">{{ $slot }}</p>
+<p class="text-l md:text-xl text-black font-bold px-4 leading-tight pb-2">{{ $slot }}</p>

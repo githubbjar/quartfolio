@@ -18,7 +18,7 @@
 
     <x-section.header>
         <x-section.title>Graphic Design</x-section.title>
-        <x-section.subtitle>Twenty years in magazine and book publishing creating on-brand visuals that elevate the message.</x-section.subtitle>
+        <x-section.subtitle>Two decades in magazine and book publishing designing thoughtful visuals that serve the message. </x-section.subtitle>
         <x-section.tools>InDesign, Photoshop, Illustrator, Word
         </x-section.tools>
     </x-section.header> 
