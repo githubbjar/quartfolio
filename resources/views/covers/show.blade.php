@@ -26,7 +26,7 @@
 
                 @if($project->quarter && $project->year)
                 <p class="tinos-regular text-center text-md tracking-wide uppercase text-black">
-                    {{ $project->quarter_label }} {{ $project->year }}
+                    Cover &#8212; {{ $project->quarter_label }} {{ $project->year }}
                 </p>
                 @endif
 

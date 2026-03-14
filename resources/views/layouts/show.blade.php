@@ -25,8 +25,7 @@
 
                 @if($project->quarter && $project->year)
                 <p class="tinos-regular text-center text-md tracking-wide uppercase text-black">
-                    {{ $project->quarter_label }} {{ $project->year }} &#8212; 
-                    <a class="underline" href="{{ asset('pdfs/' . $project->slug . '.pdf') }}" target="_blank">View Spreads (PDF)</a>
+                    Layout &#8212; {{ $project->quarter_label }} {{ $project->year }}
                 </p>
                 @endif
 
@@ -58,14 +57,18 @@
             </div>
         </div>
 
-        <p class="text-center text-sm uppercase tracking-widest text-gray-700 mb-4">
+        <p class="text-center text-md uppercase tracking-widest text-gray-700 mb-4">
             Project Overview
         </p>
 
         <div class="mx-auto lg:max-w-2xl px-4 pb-10">
             <p class="tinos-regular text-center text-2xl font-bold leading-tight">
-                {{ $project->description }}
+                {{ $project->description }}</p> 
+                
+            <p class="text-center mt-5">
+                <a class="btn-sm text-white bg-black hover:bg-gray-500 rounded-none" href="{{ asset('pdfs/' . $project->slug . '.pdf') }}" target="_blank">View Spreads (PDF)</a>
             </p>
+
             <div class="flex justify-center mt-12">
                 <div
                     class="w-40 h-2.5 bg-black"

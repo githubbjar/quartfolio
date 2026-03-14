@@ -55,7 +55,7 @@
 
 
                 <!-- Layouts -->
-                <div x-show="['2'].includes(category)" class="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto justify-items-center">    
+                <div x-show="['2'].includes(category)" class="grid grid-cols-1 lg:grid-cols-2 gap-6 mx-auto justify-items-center">    
                     @foreach ($layouts as $layout)
                         <div x-show="['2'].includes(category)">
                             <div class="relative">                                    

@@ -1,6 +1,6 @@
 <!-- Testimonial carousel -->
 <section class="bg-black pt-10 px-2 md:px-10">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto px-4 md:px-6">
         <div class="pb-12 md:pb-10">
 
             <!-- Carousel area -->
@@ -42,7 +42,7 @@
                     <!-- Arrows -->
                     <div class="absolute inset-0 flex items-center justify-between">
                         <button
-                            class="btn-sm rounded-none relative z-20 w-12 h-12 p-1 box-content flex items-center justify-center group transform -translate-x-2 md:-translate-x-1/2 bg-gray-800 hover:bg-gray-600 transition duration-150 ease-in-out"
+                            class="btn-sm rounded-none relative z-20 w-8 md:w-12 h-8 md:h-12 p-1 box-content flex items-center justify-center group transform -translate-x-2 md:-translate-x-1/2 bg-gray-800 hover:bg-gray-600 transition duration-150 ease-in-out"
                             @click="active = active === 0 ? items.length - 1 : active - 1; stopAutorotate();"
                         >
                             <span class="sr-only">Previous</span>
@@ -51,7 +51,7 @@
                             </svg>
                         </button>
                         <button
-                            class="btn-sm rounded-none relative z-20 w-12 h-12 p-1 box-content flex items-center justify-center group transform translate-x-2 md:translate-x-1/2 bg-gray-800 hover:bg-gray-600 transition duration-150 ease-in-out"
+                            class="btn-sm rounded-none relative z-20 w-8 md:w-12 h-8 md:h-12 p-1 box-content flex items-center justify-center group transform translate-x-2 md:translate-x-1/2 bg-gray-800 hover:bg-gray-600 transition duration-150 ease-in-out"
                             @click="active = active === items.length - 1 ? 0 : active + 1; stopAutorotate();"
                         >
                             <span class="sr-only">Next</span>

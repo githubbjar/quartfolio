@@ -1,5 +1,5 @@
 
-<div class="max-w-6xl mx-auto px-4">
+<div class="mx-auto lg:max-w-6xl md:max-w-5xl max-w-2xl px-10 lg:px-1">
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
 

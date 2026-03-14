@@ -1,51 +1,45 @@
-<footer class="bg-black text-gray-300 footer">
-    <div class="max-w-7xl mx-auto px-18 py-12 grid lg:grid-cols-2">
+<footer class="footer">
+    <div class="max-w-7xl pt-14 mx-auto px-18 pb-12 grid lg:grid-cols-2">
 
         {{-- Identity --}}
-        <div>
-            <h3 class="tinos-regular text-black font-semibold text-4xl">
+        <div class="text-center lg:text-left">
+            <h3 class="tinos-regular text-black font-semibold text-4xl md:text-5xl">
                 Quartfolio 
             </h3>
-            <p class="text-sm text-black mt-2">
-                <strong>The online portfolio of Jerry M. Janquart</strong><br />Designer & Developer crafting clean, performant web experiences.
+            <p class="text-lg md:text-xl text-black mt-2 leading-5.5">
+                <strong>Portfolio of Jerry Janquart</strong></p>
             </p>
-            <p class="text-xs mt-4 text-black">
+            <p class="lg:w-3/5 text-md md:text-lg text-black mt-2 leading-5.5">
+                Designer & Developer crafting clean, performant web experiences.
+            </p>
+            <p class="text-xs md:text-base mt-2 text-black">
                 Built with Laravel, Tailwind, Alpine, Vite
             </p>
         </div>
 
         {{-- Contact --}}
-        <div class="flex flex-col pb-10 gap-6 text-lg pt-10">
+        <div class="mt-6">
+            <div class="text-center lg:text-left space-y-2 lg:pl-20">
+                
+                <div class="space-y-2 lg:flex lg:items-center lg:space-y-0 lg:space-x-4 lg:text-lg">
+                    <h3 class="font-semibold uppercase">Connect</h3>
+                    <a href="mailto:jmjanquart@gmail.com" class="hover:underline">
+                        jmjanquart@gmail.com
+                    </a>
 
-            
-
-            <div class="flex flex-wrap items-center justify-center gap-8 text-lg text-black">
-
-    <span class="font-semibold">
-        Connect
-    </span>
-
-    <a href="mailto:jmjanquart@gmail.com" class="hover:underline">
-        jmjanquart@gmail.com
-    </a>
-
-    <a href="https://github.com/githubjar" target="_blank" rel="noopener" class="hover:underline">
-        GitHub
-    </a>
-
-    <a href="https://linkedin.com/in/jmjanquart" target="_blank" rel="noopener" class="hover:underline">
-        LinkedIn
-    </a>
-
-</div>
-    </div>
-
-</div>
-
+                    <div class="space-x-3">
+                        <a href="#" class="hover:underline">GitHub</a>
+                        <span></span>
+                        <a href="#" class="hover:underline">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </div>
 
-    <div class="bg-gray-900 border-t border-gray-800 text-center text-xs py-4 text-gray-500">
+    <div class="bg-gray-900 border-t border-gray-800 text-center text-xs py-4 text-gray-300">
         © {{ date('Y') }} Jerry M. Janquart. All rights reserved.
     </div>
+
 </footer>
