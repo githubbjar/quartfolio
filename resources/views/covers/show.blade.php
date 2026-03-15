@@ -20,7 +20,7 @@
             <div class="bg-white text-black p-4 w-fit mx-auto"
                 style="clip-path: polygon(0 0, 100% 0, 98% 100%, 2% 96%);">
 
-                <h1 class="tinos-regular text-center text-lg md:text-2xl font-bold leading-tight">
+                <h1 class="tinos-regular text-center text-lg md:text-2xl font-bold leading-tight pb-2">
                     {{ $project->title }}
                 </h1>
 
@@ -50,7 +50,7 @@
                 opacity-0 scale-95
                 animate-[fadeScale_0.6s_ease-out_0.2s_forwards]"
         >
-            <div class="grid grid-cols-1 gap-6">
+            <div class="grid grid-cols-1 gap-6 pt-6">
                 <img
                     src="{{ $project->hero_url }}"
                     alt="{{ $project->title }}"
