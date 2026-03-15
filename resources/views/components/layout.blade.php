@@ -5,8 +5,26 @@
 
 <head>
     <meta charset="utf-8">
+
     <title>{{ $title }}</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <meta name="description" content="{{ $description ?? 'Design and development portfolio of Jerry Janquart featuring editorial layouts, magazine covers, and web projects.' }}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph (for LinkedIn, Slack, Facebook, etc) -->
+    <meta property="og:title" content="{{ $title }}">
+    <meta property="og:description" content="{{ $description ?? 'Design and development portfolio of Jerry Janquart.' }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:image" content="{{ asset('images/og-image.jpg') }}">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $title }}">
+    <meta name="twitter:description" content="{{ $description ?? 'Design and development portfolio of Jerry Janquart.' }}">
+    <meta name="twitter:image" content="{{ asset('images/og-image.jpg') }}">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
