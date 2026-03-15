@@ -145,7 +145,7 @@
 
                     </ul>
 
-                    <ul class="flex justify-end flex-wrap items-center pr-2 mr-4">
+                    <ul class="flex justify-end flex-wrap items-center mr-4">
                         <li>
                             <a class="font-bold btn-sm text-white bg-black hover:bg-gray-500 ml-6 rounded-none" href="{{ route('message.send') }}">Contact</a>
                         </li>
