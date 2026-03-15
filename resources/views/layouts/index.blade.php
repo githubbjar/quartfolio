@@ -1,5 +1,4 @@
-<x-layout title="Layouts - Quartfolio: Jerry M. Janquart Design and Development Portfolio">
-
+<x-layout title="Editorial Layouts | Quartfolio">
     <x-hero />
     
     <x-section.art-layout bg="graphics-bg">

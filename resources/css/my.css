@@ -14,9 +14,8 @@
 
 .graphics-bg {
     background-image: url('../images/homepage/graphics-background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
+    background-size: 500px;
 }
 
 .web-dev-bg {

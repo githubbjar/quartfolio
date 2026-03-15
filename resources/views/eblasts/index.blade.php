@@ -1,5 +1,4 @@
-<x-layout title="Email Blasts - Quartfolio: Jerry M. Janquart Design and Development Portfolio">
-
+<x-layout title="Email Marketing | Quartfolio">
     <x-hero />
 
     <x-section.art-layout bg="blast-bg">

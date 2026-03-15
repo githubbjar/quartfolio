@@ -1,4 +1,4 @@
-<x-layout :title="$project->title . ' - Layouts - Quartfolio'">
+<x-layout :title="$project->title . ' (Editorial ' .  ucfirst($project->type) . ') | Quartfolio'">
 
     <x-hero />
     
@@ -25,7 +25,7 @@
 
                 @if($project->quarter && $project->year)
                 <p class="tinos-regular text-center text-md tracking-wide uppercase text-black">
-                    Layout &#8212; {{ $project->quarter_label }} {{ $project->year }}
+                    Editorial {{ $project->type }} &#8212; {{ $project->quarter_label }} {{ $project->year }}
                 </p>
                 @endif
 

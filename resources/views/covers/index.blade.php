@@ -1,4 +1,4 @@
-<x-layout title="Covers - Quartfolio: Jerry M. Janquart Design and Development Portfolio">
+<x-layout title="Magazine Covers | Quartfolio">
 
     <x-hero />
     

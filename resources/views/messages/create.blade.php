@@ -1,5 +1,4 @@
-<x-layout title="Send Me a Message - Quartfolio: Jerry M. Janquart Design and Development Portfolio">
-    <x-hero />
+<x-layout title="Contact | Quartfolio">    <x-hero />
     <x-section.art-layout bg="graphics-bg">
 
 

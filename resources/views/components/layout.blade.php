@@ -1,9 +1,11 @@
+@props(['title' => 'Quartfolio | Graphic Design & Web Development by Jerry Janquart'])
+
 <!DOCTYPE html>
 <html lang="en" class="">
 
 <head>
     <meta charset="utf-8">
-    <title>Quartfolio | Graphic Design & Web Development Portfolio of Jerry M. Janquart</title>
+    <title>{{ $title }}</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
