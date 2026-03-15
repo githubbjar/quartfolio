@@ -3,7 +3,7 @@
 
     <x-section.art-layout bg="blast-bg">
 
-        <section class="max-w-6xl mx-auto px-6 py-6 grid md:grid-cols-[1fr_2fr] gap-12 items-center">
+        <section class="max-w-6xl mx-auto px-6 lg:py-6 grid lg:grid-cols-[1fr_2fr] gap-12 items-center">
 
             <!-- LEFT COLUMN -->
             <x-section.header>
@@ -30,9 +30,10 @@
             </x-section.header>
 
             <!-- RIGHT COLUMN -->
-            <div class="flex justify-center md:justify-end">
+            <div class="hidden md:flex justify-end">
                 <img 
-                    src="{{ asset('images/eblasts-index.webp') }}" alt="Featured eblast" 
+                    src="{{ asset('images/covers-index.webp') }}" 
+                    alt="Featured Covers"
                     class="w-full rotate-1"
                 >
             </div>
