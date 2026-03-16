@@ -35,7 +35,7 @@
             <!-- RIGHT COLUMN -->
             <div class="hidden md:flex justify-end">
                 <img 
-                    src="{{ asset('images/covers-index.webp') }}" 
+                    src="{{ $featuredLayout->hero_url }}" 
                     alt="Featured Covers"
                     class="w-full rotate-1"
                 >
