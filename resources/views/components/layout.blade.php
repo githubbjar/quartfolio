@@ -70,7 +70,11 @@
                     <!-- Desktop menu links -->
                     <ul class="flex grow flex-wrap items-center font-medium">
                         
-                        
+                        <li>
+                            <a class="text-black hover:text-gray-600 px-5 py-2 flex items-center transition duration-150 ease-in-out" href="{{ route('about') }}">
+                                / About
+                            </a>
+                        </li>
 
                         <li x-data="{ open: false }" class="relative">
                                 
@@ -117,6 +121,7 @@
                                 <span class="hidden lg:inline">/ Email Marketing</span>
                             </a>
                         </li>
+                        
 
                         @if (session('admin_logged_in'))
     
