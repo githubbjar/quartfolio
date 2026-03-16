@@ -7,7 +7,7 @@
             <img 
                 src="{{ asset('images/jerry-janquart-headshot.webp') }}" 
                 alt="Jerry Janquart"
-                class="float-right ml-8 mb-6 md:w-80 lg:w-96 rotate-1"
+                class="float-right ml-8 mb-6 md:w-80 lg:w-108 rotate-1"
             >
         </div>
 
@@ -48,7 +48,7 @@
 
 <p class="tinos-regular text-xl mb-5">
     
-    <span class="float-left mr-4 mb-2 bg-black text-white font-bold text-4xl px-3 py-2 -rotate-3">
+    <span class="float-left mr-4 mb-2 bg-black text-white font-bold text-4xl px-3 py-2 [clip-path:polygon(0_0,100%_0,95%_100%,0_100%)]">
         I
     </span>’m Jerry M. Janquart, a designer and developer who helps publications and organizations bring ideas to life across print, web, and digital publishing systems.
 
@@ -57,7 +57,7 @@
 
 <p class="tinos-regular text-xl mb-5">In practice, that means my work regularly spans the full lifecycle of a project—from design and development to production and delivery.
 
-    troubleshooting subscriber issues.
+    
 
 </div>
 
@@ -78,7 +78,7 @@
 
 <div class="w-full lg:w-[70%] mx-auto">  
 
-<p class="tinos-regular text-xl mb-5">I have worked extensively with publications such as <em>Touchstone</em> and <em>Salvo</em>, contributing to both their print and digital presence. On any given day I might be designing a magazine cover, preparing files for the printer, building a new feature for a website, launching an email campaign to thousands of readers, or   
+<p class="tinos-regular text-xl mb-5">I have worked extensively with publications such as <em>Touchstone</em> and <em>Salvo</em>, contributing to both their print and digital presence. On any given day I might be designing a magazine cover, preparing files for the printer, building a new feature for a website, launching an email campaign to thousands of readers, or troubleshooting subscriber issues. 
 
 <p class="tinos-regular text-xl mb-5">My role often extends beyond design and development into the operational side of publishing and nonprofit work. I regularly prepare and export data used for shipping, fulfillment, and fundraising campaigns, manage subscriber communications and customer service issues, and support the digital systems that keep those efforts running smoothly.
 
@@ -86,22 +86,21 @@
 
 <p class="tinos-regular text-xl mb-5">This range of responsibilities has given me a practical understanding of how creative work actually moves through an organization. Design doesn’t happen in isolation—it exists within systems, workflows, deadlines, and real-world constraints. I enjoy building those systems just as much as I enjoy designing the final result.
 
-
-
-<p class="tinos-regular text-xl mb-5">My technical toolkit includes Laravel, Tailwind, Alpine, and modern web publishing tools, which I use to build clean, maintainable websites and digital products. At the same time, my background in editorial design and print production keeps the focus on clarity, structure, and strong visual communication.
-
-    </div>
+</div>
     
 
 <div>
     <img 
         src="{{ asset('images/jerry-and-gary.webp') }}" 
         alt="Gary and Jerry"
-        class="float-right ml-8 mb-6 w-60 rotate-1"
+        class="float-right ml-8 mb-6 w-72 rotate-1"
     >
 </div>
 
-<div class="w-full lg:w-[70%] mx-auto pb-40">
+<div class="w-full lg:w-[70%] mx-auto pb-20">
+
+<p class="tinos-regular text-xl mb-5">My technical toolkit includes Laravel, Tailwind, Alpine, and modern web publishing tools, which I use to build clean, maintainable websites and digital products. At the same time, my background in editorial design and print production keeps the focus on clarity, structure, and strong visual communication.
+
 
 <p class="tinos-regular text-xl mb-5">Quartfolio is a collection of work from across those disciplines—graphic design, web development, and digital publishing—along with a few experiments along the way.
 
