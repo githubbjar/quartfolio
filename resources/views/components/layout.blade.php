@@ -25,6 +25,11 @@
     <meta name="twitter:description" content="{{ $description ?? 'Design and development portfolio of Jerry Janquart.' }}">
     <meta name="twitter:image" content="{{ asset('images/og-image.jpg') }}">
 
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
