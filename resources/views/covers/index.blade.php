@@ -52,7 +52,7 @@
                     <div x-show="['1'].includes(category)">
                         <div class="relative">                                    
                             <a href="{{ route('covers.show', $cover) }}">
-                                <img src="{{ $cover->thumb_url }}" alt="{{ $cover->title }}">
+                                <img src="{{ $cover->thumb_url }}" alt="{{ $cover->title }}" class="duration-200 hover:scale-103">
                             </a>
                         </div>
                     </div>

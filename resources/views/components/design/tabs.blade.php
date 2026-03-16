@@ -46,7 +46,7 @@
                     @foreach ($covers as $cover)
                         <div @class(['hidden lg:block' => $loop->index === 2])>
                             <a href="{{ route('covers.show', $cover) }}" class="block w-full">
-                                <img class="block w-full h-auto" src="{{ $cover->thumb_url }}" alt="{{ $cover->title }}">
+                                <img class="block w-full h-auto transition duration-200 hover:scale-103" src="{{ $cover->thumb_url }}" alt="{{ $cover->title }}">
                             </a>
                         </div>
                     @endforeach
@@ -60,7 +60,7 @@
                         <div x-show="['2'].includes(category)">
                             <div class="relative">                                    
                                 <a href="{{ route('layouts.show', $layout) }}" class="block w-full">
-                                <img class="block w-full h-auto" src="{{ $layout->thumb_url }}" alt="{{ $layout->title }}">
+                                <img class="block w-full h-auto duration-200 hover:scale-103" src="{{ $layout->thumb_url }}" alt="{{ $layout->title }}">
                             </a>
                             </div>
                         </div>

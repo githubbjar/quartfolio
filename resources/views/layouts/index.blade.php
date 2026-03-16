@@ -55,7 +55,7 @@
                     <div x-show="['1'].includes(category)">
                         <div class="relative">                                    
                             <a href="{{ route('layouts.show', $layout) }}">
-                                <img src="{{ $layout->thumb_url }}" alt="{{ $layout->title }}">
+                                <img src="{{ $layout->thumb_url }}" alt="{{ $layout->title }}" class="duration-200 hover:scale-103">
                             </a>
                         </div>
                     </div>
