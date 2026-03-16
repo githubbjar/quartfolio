@@ -50,13 +50,11 @@
                 opacity-0 scale-95
                 animate-[fadeScale_0.6s_ease-out_0.2s_forwards]"
         >
-            <div class="grid grid-cols-1 gap-6 pt-6">
-                <img
-                    src="{{ $project->hero_url }}"
-                    alt="{{ $project->title }}"
-                    class="w-full h-auto"
-                >
-            </div>
+            <img
+                src="{{ $project->hero_url }}"
+                alt="{{ $project->title }}"
+                class="w-full h-auto"
+            >
         </div>
 
         <p class="text-center text-sm uppercase tracking-widest text-gray-700 mb-4 mt-6 md:mt-2">

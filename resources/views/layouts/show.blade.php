@@ -44,17 +44,15 @@
         </div>
 
         <div
-            class="max-w-sm mx-auto lg:max-w-6xl md:max-w-3xl 
+            class="max-w-lg mx-auto lg:max-w-6xl md:max-w-3xl 
                 opacity-0 scale-95
                 animate-[fadeScale_0.6s_ease-out_0.2s_forwards]"
         >
-            <div class="grid grid-cols-1 gap-6 pt-4 pb-0">
-                <img
-                    src="{{ $project->hero_url }}"
-                    alt="{{ $project->title }}"
-                    class="w-full h-auto"
-                >
-            </div>
+             <img
+                src="{{ $project->hero_url }}"
+                alt="{{ $project->title }}"
+                class="w-full max-w-300 mx-auto h-auto pt-4"
+            >
         </div>
 
         <p class="text-center text-sm uppercase tracking-widest text-gray-700 mb-4 mt-6 md:mt-2">
