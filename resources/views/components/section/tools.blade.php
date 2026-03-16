@@ -1,1 +1,1 @@
-<p class="text-l text-black">TOOLS: {{  $slot }}</p>
+<p class="text-l text-black ">TOOLS — {{  $slot }}</p>
