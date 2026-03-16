@@ -48,7 +48,7 @@
                 opacity-0 scale-95
                 animate-[fadeScale_0.6s_ease-out_0.2s_forwards]"
         >
-            <div class="grid grid-cols-1 gap-6 py-6">
+            <div class="grid grid-cols-1 gap-6 pt-4 pb-0">
                 <img
                     src="{{ $project->hero_url }}"
                     alt="{{ $project->title }}"
