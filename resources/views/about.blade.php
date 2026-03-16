@@ -7,7 +7,7 @@
             <img 
                 src="{{ asset('images/jerry-janquart-headshot.webp') }}" 
                 alt="Jerry Janquart"
-                class="float-right ml-8 mb-6 md:w-80 lg:w-108 rotate-1"
+                class="float-right ml-8 mb-6 md:w-80 lg:w-108 mt-10 rotate-1"
             >
         </div>
 
@@ -26,7 +26,7 @@
                 </p>
 
                 <div class="">
-                    <h2 class="tinos-regular h2 mb-4 uppercase leading-tight">Jerry Janquart</h2>
+                    <h2 class="tinos-regular h2 mb-4 uppercase leading-none pt-4">Jerry <br />Janquart</h2>
                 </div>
 
                 <p class="tinos-regular text-center text-2xl font-bold leading-tight">
