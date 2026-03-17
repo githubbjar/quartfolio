@@ -225,6 +225,9 @@
                             <!-- Links -->
                             <ul>
                                 <li>
+                                    <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('about') }}">/ About</a>
+                                </li>
+                                <li>
                                     <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="#design">/ Graphic Design</a>
                                 </li>
                                 <li class="ml-4">
