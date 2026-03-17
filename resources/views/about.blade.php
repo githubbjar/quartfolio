@@ -50,8 +50,8 @@
     
     <span class="float-left mr-4 mb-2 bg-black text-white font-bold text-4xl px-3 py-2 [clip-path:polygon(0_0,100%_0,95%_100%,0_100%)]">
         I
-    </span>’m Jerry M. Janquart, a designer and developer who helps publications and organizations bring ideas to life across print, web, and digital publishing systems.
-
+    </span>’m Jerry Janquart, a designer and developer who helps publications and organizations bring ideas to life across print, web, and digital publishing systems.
+<p class="text-sm mb-2 uppercase tracking-wide font-bold">&#8212; What I do &#8212;</p>
 <p class="tinos-regular text-xl mb-5">My work sits at the intersection of editorial design, web development, and production workflows. I’m often involved not only in designing and building creative projects, but also in the systems and processes that allow those projects to move from concept to finished product.
     
 
@@ -84,6 +84,7 @@
 
 <p class="tinos-regular text-xl mb-5">I’ve also worked on the technical and design side of conference events, including managing ticketing systems, designing event websites, and producing printed materials used at the conference itself.
 
+    <p class="text-sm mb-2 uppercase tracking-wide font-bold">&#8212; Perspective &#8212;</p>
 <p class="tinos-regular text-xl mb-5">This range of responsibilities has given me a practical understanding of how creative work actually moves through an organization. Design doesn’t happen in isolation—it exists within systems, workflows, deadlines, and real-world constraints. I enjoy building those systems just as much as I enjoy designing the final result.
 
 </div>
