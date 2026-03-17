@@ -5,7 +5,7 @@
 
         <div class="hidden md:block">
             <img 
-                src="{{ asset('images/jerry-janquart-headshot.webp') }}" 
+                src="{{ asset('images/jerry-janquart-photo.webp') }}" 
                 alt="Jerry Janquart"
                 class="float-right ml-8 mb-6 md:w-80 lg:w-108 mt-10 rotate-1"
             >
@@ -13,7 +13,7 @@
 
         <div class="mx-auto">
             <img 
-                src="{{ asset('images/jerry-janquart-headshot.webp') }}" 
+                src="{{ asset('images/jerry-janquart-photo.webp') }}" 
                 alt="Jerry Janquart"
                 class="mx-auto mb-6 w-80 rotate-1 md:hidden"
             >
@@ -61,7 +61,7 @@
 
 </div>
 
-    <div class="bg-white text-black p-6 float-left mr-8 mb-6 w-72">
+    <div class="bg-white text-black p-6 float-left mr-8 mb-6 w-full md:w-72">
         <h3 class="font-bold mb-3 text-center tinos-regular text-2xl">Capabilities</h3>
 
         <ul class="space-y-2 tinos-regular text-lg leading-tight">
