@@ -1,4 +1,4 @@
-<x-layout title="Quartfolio: Jerry M. Janquart Design and Development Portfolio">
+<x-layout>
  
     <x-hero />
     <x-design.tabs 
