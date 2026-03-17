@@ -28,9 +28,9 @@
                     </a>
 
                     <div class="space-x-3">
-                        <a href="#" class="hover:underline">GitHub</a>
+                        <a href="https://github.com/githubbjar" class="hover:underline">GitHub</a>
                         <span></span>
-                        <a href="#" class="hover:underline">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/jerry-janquart-67aa608/" class="hover:underline">LinkedIn</a>
                     </div>
                 </div>
             </div>
