@@ -109,9 +109,3 @@ Route::post('/admin', [AdminAuthController::class, 'login'])
 Route::post('/admin/logout', [AdminAuthController::class, 'logout'])
     ->name('admin.logout')
     ->middleware('admin.auth');
-
-Route::get('/appy', function () {
-    return view('appy');
-});
-
-Route::get('/health', fn () => 'ok');
