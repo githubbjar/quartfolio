@@ -9,11 +9,11 @@
             </h1>
 
             <p class="[clip-path:polygon(2%_0,100%_0,95%_100%,0_100%)] md:text-xl text-white bg-black mt-2
-                      w-[80%] md:w-[90%] lg:w-[60%] mx-auto py-4
+                      w-[80%] md:w-[90%] lg:w-[70%] mx-auto py-4
                       opacity-0 translate-y-3
                       animate-[fadeUp_0.7s_ease-out_0.25s_forwards]">
-                <span class="font-bold">Creative Direction & Execution</span><br>
-                by Jerry M. Janquart
+                <span class="font-bold">Creative Direction & Design Execution</span><br>
+                by Jerry Janquart
             </p>
 
         </div>

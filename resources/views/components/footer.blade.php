@@ -39,7 +39,7 @@
     </div>
 
     <div class="bg-gray-900 border-t border-gray-800 text-center text-xs py-4 text-gray-300">
-        © {{ date('Y') }} Jerry M. Janquart. All rights reserved.
+        © {{ date('Y') }} Jerry Janquart. All rights reserved.
     </div>
 
 </footer>

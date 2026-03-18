@@ -1,4 +1,4 @@
-<x-layout title="Projects - Quartfolio: Jerry M. Janquart Design and Development Portfolio">
+<x-layout title="Projects | Quartfolio">
     <x-hero />
     <x-section.art-layout bg="graphics-bg">
         <x-section.header>

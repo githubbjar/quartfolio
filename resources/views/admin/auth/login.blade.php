@@ -1,4 +1,4 @@
-<x-layout title="Login - Quartfolio: Jerry M. Janquart Design and Development Portfolio">
+<x-layout title="Login | Quartfolio">
 
     <x-hero />
     
