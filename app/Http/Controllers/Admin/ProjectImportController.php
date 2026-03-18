@@ -55,7 +55,7 @@ class ProjectImportController extends Controller
 
         return back()->with(
             'success',
-            "{$count} project" . ($count === 1 ? '' : 's') . " imported successfully."
+            "{$count} project".($count === 1 ? '' : 's').' imported successfully.'
         );
     }
 }

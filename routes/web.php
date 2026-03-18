@@ -67,8 +67,8 @@ Route::middleware('admin.auth')
             ->name('admin.projects.import');
     });
 
-    Route::controller(MessageController::class)
-        ->group(function () {
+Route::controller(MessageController::class)
+    ->group(function () {
         Route::get('/messages/send', 'create')
             ->name('message.send');
 
@@ -80,22 +80,22 @@ Route::middleware('admin.auth')
     ->controller(MessageController::class)
     ->group(function () {
 
-    // show messages -- backend
-    Route::get('/messages', 'messagesIndex')
-        ->name('messages.index');
+        // show messages -- backend
+        Route::get('/messages', 'messagesIndex')
+            ->name('messages.index');
 
-    // delete a message -- backend
-    Route::delete('/messages/{message}', 'destroy')
-        ->name('message.destroy');
+        // delete a message -- backend
+        Route::delete('/messages/{message}', 'destroy')
+            ->name('message.destroy');
 
-    // mark a message as read/unread -- backend
-    Route::patch('/messages/{message}/toggle-read', 'toggleRead')
-        ->name('messages.toggleRead');
+        // mark a message as read/unread -- backend
+        Route::patch('/messages/{message}/toggle-read', 'toggleRead')
+            ->name('messages.toggleRead');
 
-    Route::patch('/messages/{message}/read', 'markRead')
-        ->name('message.markRead');
+        Route::patch('/messages/{message}/read', 'markRead')
+            ->name('message.markRead');
 
-});
+    });
 
 // show login page
 Route::get('/admin', [AdminAuthController::class, 'showLogin'])

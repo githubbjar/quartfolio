@@ -23,10 +23,10 @@ class MessageController extends Controller
     {
 
         if ($request->filled('company')) {
-        // Pretend it worked so bots don't learn
-        return redirect()
-            ->route('home')
-            ->with('success', 'Message sent successfully.');
+            // Pretend it worked so bots don't learn
+            return redirect()
+                ->route('home')
+                ->with('success', 'Message sent successfully.');
         }
 
         $validated = $request->validate([
