@@ -15,7 +15,7 @@
             <img 
                 src="{{ asset('images/jerry-janquart-photo.webp') }}" 
                 alt="Jerry Janquart"
-                class="mx-auto mb-6 w-80 rotate-1 md:hidden"
+                class="mx-auto mb-2 w-80 rotate-1 md:hidden mt-6"
             >
         </div>
 
@@ -35,7 +35,7 @@
     </span>
 </p>
 
-                <div class="flex justify-center mt-12">
+                <div class="flex justify-center mt-10 mb-4">
                 <div
                     class="w-40 h-2.5 bg-black"
                     style="clip-path: polygon(8% 100%, 0% 100%, 6% 0%, 100% 20%, 100% 100%);"
@@ -105,7 +105,7 @@
 
 <p class="tinos-regular text-xl mb-5">Quartfolio is a collection of work from across those disciplines—graphic design, web development, and digital publishing—along with a few experiments along the way.
 
-<p class="tinos-regular text-xl mb-5">Outside of work I live with my wife Julie, our two children, Laney and Logan, and Gary Michael, our extremely photogenic dog.
+<p class="tinos-regular text-xl">Outside of work I live with my wife Julie, our two children, Laney and Logan, and Gary Michael, our extremely photogenic dog.
 
             
 </div>
