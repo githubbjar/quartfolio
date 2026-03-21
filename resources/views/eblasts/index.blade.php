@@ -43,7 +43,7 @@
     
         
 
-        <div class="mx-auto lg:max-w-6xl md:max-w-5xl max-w-2xl px-10 lg:px-1 pt-10 pb-10">
+        <div class="mx-auto lg:max-w-6xl md:max-w-5xl max-w-2xl pt-10 pb-10">
             <div class="stagger-grid grid md:grid-cols-3 gap-x-10 gap-y-12">
                 
                 @foreach($eblasts as $eblast)
