@@ -53,7 +53,7 @@ class ProjectController extends Controller
         return view('layouts.index', compact('layouts', 'featuredLayout'));
     }
 
-    public function layoutShow(Project $project)
+    public function layoutsShow(Project $project)
     {
         abort_unless($project->type === 'layout', 404);
 
@@ -70,6 +70,35 @@ class ProjectController extends Controller
             ->first();
 
         return view('layouts.show', compact('project', 'previous', 'next'));
+    }
+
+    // Conceptual Covers -- index and show, with previous/next navigation
+    public function conceptualCoversIndex()
+    {
+        $conceptualCovers = Project::where('type', 'concept')
+            ->orderByDesc('id')
+            ->paginate(9);
+
+        return view('conceptual-covers.index', compact('conceptualCovers'));
+    }
+
+    public function conceptualCoversShow(Project $project)
+    {
+        abort_unless($project->type === 'concept', 404);
+
+        // "Previous" in the index (id DESC) = higher id (newer insert)
+        $previous = Project::where('type', 'concept')
+            ->where('id', '>', $project->id)
+            ->orderBy('id')          // smallest id greater than current (closest previous)
+            ->first();
+
+        // "Next" in the index (id DESC) = lower id
+        $next = Project::where('type', 'concept')
+            ->where('id', '<', $project->id)
+            ->orderByDesc('id')      // largest id less than current (closest next)
+            ->first();
+
+        return view('conceptual-covers.show', compact('project', 'previous', 'next'));
     }
 
     // promotions -- index and show, similar to covers but separate views and pagination

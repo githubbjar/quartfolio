@@ -26,6 +26,12 @@ Route::controller(ProjectController::class)->group(function () {
     Route::get('/layouts/{project:slug}', 'layoutShow')
         ->name('layouts.show');
 
+    // Conceptual Covers
+    Route::get('/conceptual-covers', 'conceptualCoversIndex')
+        ->name('conceptual-covers.index');
+    Route::get('/conceptual-covers/{project:slug}', 'conceptualCoversShow')
+        ->name('conceptual-covers.show');
+
     // Eblasts
     Route::get('/eblasts', 'eblastsIndex')
         ->name('eblasts.index');

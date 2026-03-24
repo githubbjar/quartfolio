@@ -48,6 +48,7 @@
                     <option value="">Select type</option>
 
                     <option value="cover">Cover</option>
+                    <option value="concept">Conceptual Cover</option>
                     <option value="layout">Layout</option>
                     <option value="website">Website</option>
                     <option value="eblast">Eblast</option>
