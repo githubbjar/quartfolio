@@ -31,7 +31,7 @@
             </x-section.header>
 
             <!-- RIGHT COLUMN -->
-            <div class="hidden md:flex justify-end mb-10">
+            <div class="md:flex justify-end mb-20">
                 <a href="/conceptual-covers/the-new-cambridge-paragraph-bible">
                 <img 
                     src="/storage/projects/the-new-cambridge-paragraph-bible-thumb.webp" 
