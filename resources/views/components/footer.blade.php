@@ -7,10 +7,10 @@
                 Quartfolio 
             </h3>
             <p class="text-lg md:text-xl text-black mt-2 leading-5.5">
-                <strong>Portfolio of Jerry Janquart</strong></p>
+                <strong>The online portfolio of Jerry Janquart</strong></p>
             </p>
             <p class="lg:w-3/5 text-md md:text-lg text-black mt-2 leading-5.5">
-                Designer & Developer crafting clean, performant web experiences.
+                Creative Direction & Design Execution—Print & Web
             </p>
             <p class="text-xs md:text-base mt-2 text-black">
                 Built with Laravel, Tailwind, Alpine, Vite
