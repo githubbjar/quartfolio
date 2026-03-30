@@ -53,7 +53,7 @@ class ProjectController extends Controller
         return view('layouts.index', compact('layouts', 'featuredLayout'));
     }
 
-    public function layoutsShow(Project $project)
+    public function layoutShow(Project $project)
     {
         abort_unless($project->type === 'layout', 404);
 
