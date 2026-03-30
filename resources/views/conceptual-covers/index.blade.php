@@ -14,11 +14,11 @@
                 </p>
 
                 <div class="">
-                    <h2 class="tinos-regular h2 mb-4 uppercase">Conceptual Covers</h2>
+                    <h2 class="tinos-regular h2 mb-4 uppercase">Conceptual Cover</h2>
                 </div>
 
                 <p class="tinos-regular text-center text-2xl font-bold leading-tight">
-                    Concept-driven explorations of book cover design, typography, and publishing systems.
+                    Concept-driven exploration of bible cover design, typography, and publishing systems.
                 </p>
 
                 <div class="flex justify-center mt-12">
@@ -31,12 +31,14 @@
             </x-section.header>
 
             <!-- RIGHT COLUMN -->
-            <div class="hidden md:flex justify-end">
+            <div class="hidden md:flex justify-end mb-10">
+                <a href="/conceptual-covers/the-new-cambridge-paragraph-bible">
                 <img 
-                    src="" 
+                    src="/storage/projects/the-new-cambridge-paragraph-bible-thumb.webp" 
                     alt="Featured Covers"
                     class="w-full rotate-1"
                 >
+                </a>
             </div>
 
 
@@ -45,26 +47,7 @@
         @endif
         
 
-        <div class="mx-auto lg:max-w-6xl md:max-w-5xl max-w-2xl px-0 pt-10">
-            <div class="stagger-grid grid md:grid-cols-3 gap-6">
-                
-                @foreach ($conceptualCovers as $conceptualCover)
-                    <div x-show="['1'].includes(category)">
-                        <div class="relative">                                    
-                            <a href="{{ route('conceptual-covers.show', $conceptualCover) }}">
-                                <img src="{{ $conceptualCover->thumb_url }}" alt="{{ $conceptualCover->title }}" class="duration-200 hover:scale-103">
-                            </a>
-                        </div>
-                    </div>
-                @endforeach
-            
-            </div>
-            
-            <div class="flex justify-center mt-7 pb-20">
-                    {{ $conceptualCovers->links() }}
-            </div>
         
-        </div>
 
     </x-section.layout>
 

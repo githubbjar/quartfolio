@@ -107,6 +107,11 @@
                                 href="{{ route('layouts.index') }}">
                                     -> Layouts
                                 </a>
+
+                                <a class="block px-5 py-2 hover:bg-gray-100"
+                                href="{{ route('conceptual-covers.index') }}">
+                                    -> Conceptual Cover
+                                </a>
                             </div>
                         </li>
                         <li>
