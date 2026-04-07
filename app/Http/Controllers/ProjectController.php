@@ -156,6 +156,16 @@ class ProjectController extends Controller
             ->orderByDesc('id')      // largest id less than current (closest next)
             ->first();
 
+        $galleries = [
+            'salvo-direct-mail' => [
+                'projects/salvo-direct-mail-01.webp',
+                'projects/salvo-direct-mail-02.webp',
+                'projects/salvo-direct-mail-03.webp',
+            ],
+        ];
+
+        $project->gallery = $galleries[$project->slug] ?? [];
+
         return view('marketing.show', compact('project', 'previous', 'next'));
     }
 
