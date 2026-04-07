@@ -67,25 +67,6 @@
                     @endforeach
                 </div>
 
-                
-                <div
-                    x-show="['3'].includes(category)"
-                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-                    >
-                    @foreach ($promotions as $promotion)
-                        <div @class(['hidden lg:block' => $loop->index === 2])>
-                            <a href="{{ route('promotions.show', $promotion) }}" class="block w-full">
-                                <img class="block w-full h-auto" src="{{ $promotion->thumb_url }}" alt="{{ $promotion->title }}">
-                            </a>
-                        </div>
-                    @endforeach
-                </div>
-
-                
-
-                
-
-
             <x-design.more-button category="1" :url="route('covers.index')">
                 Covers — {{ $coverCount }}
             </x-design.more-button>
@@ -94,9 +75,6 @@
                 Layouts — {{ $layoutCount }}
             </x-design.more-button>
 
-            <x-design.more-button category="3" :url="route('promotions.index')">
-                Promotions — {{ $promotionCount }}
-            </x-design.more-button>
     </div>
 
 </x-section.layout>

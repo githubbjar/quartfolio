@@ -129,6 +129,38 @@ class ProjectController extends Controller
         return view('eblasts.show', compact('project', 'previous', 'next'));
     }
 
+
+    // Marketing & Design -- index and show, with previous/next navigation
+    public function marketingIndex()
+    {
+        $marketingPieces = Project::where('type', 'marketing')
+            ->orderByDesc('id')
+            ->paginate(9);
+
+        return view('marketing.index', compact('marketingPieces'));
+    }
+
+    public function marketingShow(Project $project)
+    {
+        abort_unless($project->type === 'marketing', 404);
+
+        // "Previous" in the index (id DESC) = higher id (newer insert)
+        $previous = Project::where('type', 'marketing')
+            ->where('id', '>', $project->id)
+            ->orderBy('id')          // smallest id greater than current (closest previous)
+            ->first();
+
+        // "Next" in the index (id DESC) = lower id
+        $next = Project::where('type', 'marketing')
+            ->where('id', '<', $project->id)
+            ->orderByDesc('id')      // largest id less than current (closest next)
+            ->first();
+
+        return view('marketing.show', compact('project', 'previous', 'next'));
+    }
+
+
+
     // admin-facing index, create, store, toggleFeatured, and destroy methods
 
     public function projectsIndex()

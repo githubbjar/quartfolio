@@ -14,29 +14,35 @@ Route::view('/about', 'about')
 
 Route::controller(ProjectController::class)->group(function () {
 
-    // Covers
+    // Covers Section
     Route::get('/covers', 'coversIndex')
         ->name('covers.index');
     Route::get('/covers/{project:slug}', 'coverShow')
         ->name('covers.show');
 
-    // Layouts
+    // Layouts Section
     Route::get('/layouts', 'layoutsIndex')
         ->name('layouts.index');
     Route::get('/layouts/{project:slug}', 'layoutShow')
         ->name('layouts.show');
 
-    // Eblasts
+    // Eblasts Section
     Route::get('/eblasts', 'eblastsIndex')
         ->name('eblasts.index');
     Route::get('/eblasts/{project:slug}', 'eblastShow')
         ->name('eblasts.show');
 
-    // Conceptual Covers
+    // Conceptual Covers Section
     Route::get('/conceptual-covers', 'conceptualCoversIndex')
         ->name('conceptual-covers.index');
     Route::get('/conceptual-covers/{project:slug}', 'conceptualCoversShow')
         ->name('conceptual-covers.show');
+
+    // Marketing and Campaign Designs Section
+    Route::get('/marketing-and-campaigns', 'marketingIndex')
+        ->name('marketing.index');
+    Route::get('/marketing-and-campaigns/{project:slug}', 'marketingShow')
+        ->name('marketing.show');
 
 });
 

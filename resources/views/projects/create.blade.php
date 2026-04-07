@@ -48,10 +48,11 @@
                     <option value="">Select type</option>
 
                     <option value="cover">Cover</option>
-                    <option value="concept">Conceptual Cover</option>
                     <option value="layout">Layout</option>
                     <option value="website">Website</option>
                     <option value="eblast">Eblast</option>
+                    <option value="concept">Conceptual Cover</option>
+                    <option value="marketing">Marketing & Campaign Design</option>
 
                 </select>
             </div>
