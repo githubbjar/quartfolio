@@ -38,12 +38,6 @@ Route::controller(ProjectController::class)->group(function () {
     Route::get('/eblasts/{project:slug}', 'eblastShow')
         ->name('eblasts.show');
 
-    // Promotions as “Projects” (frontend)
-    Route::get('/promotions', 'promotionsIndex')
-        ->name('promotions.index');
-    Route::get('/promotions/{project:slug}', 'promotionShow')
-        ->name('promotions.show');
-
 });
 
 Route::middleware('admin.auth')

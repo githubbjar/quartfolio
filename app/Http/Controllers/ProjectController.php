@@ -101,34 +101,6 @@ class ProjectController extends Controller
         return view('conceptual-covers.show', compact('project', 'previous', 'next'));
     }
 
-    // promotions -- index and show, similar to covers but separate views and pagination
-
-    public function promotionsIndex()
-    {
-        $promotions = Project::where('type', 'promotion')
-            ->orderBy('created_at', 'desc')
-            ->paginate(9);
-
-        return view('promotions.index', compact('promotions'));
-    }
-
-    public function promotionShow(Project $project)
-    {
-        abort_unless($project->type === 'promotion', 404);
-
-        $previous = Project::where('type', 'promotion')
-            ->where('created_at', '>', $project->created_at)
-            ->orderBy('created_at')
-            ->first();
-
-        $next = Project::where('type', 'promotion')
-            ->where('created_at', '<', $project->created_at)
-            ->orderBy('created_at', 'desc')
-            ->first();
-
-        return view('promotions.show', compact('project', 'previous', 'next'));
-    }
-
     // eblasts -- index only, no show page
 
     public function eblastsIndex()
