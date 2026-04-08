@@ -109,6 +109,11 @@
                                 </a>
 
                                 <a class="block px-5 py-2 hover:bg-gray-100"
+                                href="{{ route('marketing.index') }}">
+                                    -> Marketing & Camplaings
+                                </a>
+
+                                <a class="block px-5 py-2 hover:bg-gray-100"
                                 href="{{ route('conceptual-covers.index') }}">
                                     -> Conceptual Cover
                                 </a>
@@ -240,6 +245,9 @@
                                 </li>
                                 <li class="ml-4">
                                     <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('layouts.index') }}">-> Layouts</a>
+                                </li>
+                                 <li class="ml-4">
+                                    <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('marketing.index') }}">-> Marketing & Campaigns</a>
                                 </li>
                                 <li class="ml-4">
                                     <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('conceptual-covers.index') }}">-> Conceptual Cover</a>

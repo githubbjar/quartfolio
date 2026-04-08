@@ -31,7 +31,7 @@
 
                 <x-design.button category="1">Covers</x-design.button>
                 <x-design.button category="2">Layouts</x-design.button>
-                <!--<x-design.button category="3">Promotions</x-design.button>-->
+                <x-design.button category="3">Marketing & Campaigns</x-design.button>
                 
             </div>
             
@@ -67,12 +67,29 @@
                     @endforeach
                 </div>
 
+                <!-- Marketing & Campaigns -->
+                <div x-show="['3'].includes(category)" class="grid grid-cols-1 lg:grid-cols-2 gap-6 mx-auto justify-items-center">    
+                    @foreach ($marketingPieces as $marketingPiece)
+                        <div x-show="['3'].includes(category)">
+                            <div class="relative">                                    
+                                <a href="{{ route('marketing.show', $marketingPiece) }}" class="block w-full">
+                                <img class="block w-full h-auto duration-200 hover:scale-103" src="{{ $marketingPiece->thumb_url }}" alt="{{ $marketingPiece->title }}">
+                            </a>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+
             <x-design.more-button category="1" :url="route('covers.index')">
                 Covers — {{ $coverCount }}
             </x-design.more-button>
 
             <x-design.more-button category="2" :url="route('layouts.index')">
                 Layouts — {{ $layoutCount }}
+            </x-design.more-button>
+
+            <x-design.more-button category="3" :url="route('marketing.index')">
+                Marketing & Campaigns — {{ $marketingPiecesCount }}
             </x-design.more-button>
 
     </div>

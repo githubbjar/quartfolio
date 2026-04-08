@@ -26,13 +26,13 @@ class HomeController extends Controller
 
             'layoutCount' => Project::where('type', 'layout')->count(),
 
-            'promotions' => Project::where('type', 'promotion')
+            'marketingPieces' => Project::where('type', 'marketing')
                 ->where('is_featured', true)
                 ->latest()
-                ->take(3)
+                ->take(2)
                 ->get(),
 
-            'promotionCount' => Project::where('type', 'promotion')->count(),
+            'marketingPiecesCount' => Project::where('type', 'marketing')->count(),
 
             'websites' => Project::where('type', 'website')
                 ->where('is_featured', true)

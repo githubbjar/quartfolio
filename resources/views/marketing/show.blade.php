@@ -47,8 +47,8 @@
 
         <div
             x-data="{
-                hero: '{{ $project->hero_url }}',
-                activeImage: '{{ $project->hero_url }}'
+                hero: @js($project->hero_url),
+                activeImage: @js($project->hero_url)
             }"
             class="max-w-lg mx-auto lg:max-w-6xl md:max-w-3xl 
                 opacity-0 scale-95
@@ -66,12 +66,16 @@
                     @foreach($project->gallery as $image)
                         <button
                             type="button"
-                            @click="activeImage = '{{ Storage::url($image) }}'"
+                            class="p-1"
+                            @click="activeImage = @js(Storage::url($image))"
                         >
                             <img
                                 src="{{ Storage::url($image) }}"
                                 alt="{{ $project->title }} gallery image {{ $loop->iteration }}"
-                                class="w-66 md:w-74 h-auto object-cover hover:scale-105 transition"
+                                class="w-66 md:w-74 h-auto object-cover transition"
+                                :class="activeImage === @js(Storage::url($image))
+                                    ? 'ring-2 ring-black bg-black scale-105'
+                                    : 'hover:scale-105'"
                             >
                         </button>
                     @endforeach

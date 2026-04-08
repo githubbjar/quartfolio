@@ -4,10 +4,10 @@
     <x-design.tabs 
         :covers="$covers" 
         :layouts="$layouts" 
-        :promotions="$promotions" 
+        :marketingPieces="$marketingPieces" 
         :coverCount="$coverCount" 
         :layoutCount="$layoutCount" 
-        :promotionCount="$promotionCount" />
+        :marketingPiecesCount="$marketingPiecesCount" />
     <x-testimonials.testimonials />
     <x-development.web-slider :websites="$websites" />
     <x-email.blast-slider :eblasts="$eblasts" :eblastCount="$eblastCount" />

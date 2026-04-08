@@ -160,7 +160,22 @@ class ProjectController extends Controller
             'salvo-direct-mail' => [
                 'projects/salvo-direct-mail-01.webp',
                 'projects/salvo-direct-mail-02.webp',
-                'projects/salvo-direct-mail-03.webp',
+                'projects/salvo-direct-mail-03.webp'
+            ],
+            'touchstone-conference' => [
+                'projects/touchstone-conference-01.webp',
+                'projects/touchstone-conference-02.webp',
+                'projects/touchstone-conference-03.webp'
+            ],
+            'anno-domini' => [
+                'projects/anno-domini-01.webp',
+                'projects/anno-domini-02.webp',
+                'projects/anno-domini-03.webp'
+            ],
+            'touchstone-direct-mail' => [
+                'projects/touchstone-direct-mail-01.webp',
+                'projects/touchstone-direct-mail-02.webp',
+                'projects/touchstone-direct-mail-03.webp'
             ],
         ];
 
