@@ -35,7 +35,7 @@
             <!-- RIGHT COLUMN w/ placeholder image -->
             <div class="hidden md:flex justify-end">
                 <img 
-                    src="{{ asset('images/eblasts-index.webp') }}" 
+                    src="{{ asset('images/marketing-index.webp') }}" 
                     alt="Featured Covers"
                     class="w-full rotate-1"
                 >

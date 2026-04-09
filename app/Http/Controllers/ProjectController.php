@@ -177,6 +177,11 @@ class ProjectController extends Controller
                 'projects/touchstone-direct-mail-02.webp',
                 'projects/touchstone-direct-mail-03.webp'
             ],
+            'a-thousand-words-campaign' => [
+                'projects/a-thousand-words-campaign-01.webp',
+                'projects/a-thousand-words-campaign-02.webp',
+                'projects/a-thousand-words-campaign-03.webp',
+            ]
         ];
 
         $project->gallery = $galleries[$project->slug] ?? [];
