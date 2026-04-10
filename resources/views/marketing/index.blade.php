@@ -49,7 +49,7 @@
 
 
         <div class="mx-auto lg:max-w-6xl md:max-w-5xl max-w-2xl pt-10">
-            <div class="stagger-grid grid md:grid-cols-2 gap-6">
+            <div class="stagger-grid grid md:grid-cols-2 gap-14">
                 
                 @foreach ($marketingPieces as $marketingPiece)
                     <div x-show="['1'].includes(category)">

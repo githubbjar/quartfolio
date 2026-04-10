@@ -180,7 +180,12 @@ class ProjectController extends Controller
             'a-thousand-words-campaign' => [
                 'projects/a-thousand-words-campaign-01.webp',
                 'projects/a-thousand-words-campaign-02.webp',
-                'projects/a-thousand-words-campaign-03.webp',
+                'projects/a-thousand-words-campaign-03.webp'
+            ],
+            'touchstone-fundraising-campaign' => [
+                'projects/touchstone-fundraising-campaign-01.webp',
+                'projects/touchstone-fundraising-campaign-02.webp',
+                'projects/touchstone-fundraising-campaign-03.webp'
             ]
         ];
 
