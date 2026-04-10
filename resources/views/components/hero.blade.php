@@ -12,7 +12,7 @@
                       w-[80%] md:w-[90%] lg:w-[70%] mx-auto py-4
                       opacity-0 translate-y-3
                       animate-[fadeUp_0.7s_ease-out_0.25s_forwards]">
-                <span class="font-bold">Creative Direction & Design Execution</span><br>
+                <span class="font-bold">Creative Direction, Design & Development</span><br>
                 by Jerry Janquart
             </p>
 

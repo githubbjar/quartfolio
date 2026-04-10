@@ -1,4 +1,4 @@
-@props(['title' => 'Quartfolio | Graphic Design & Web Development by Jerry Janquart'])
+@props(['title' => 'Quartfolio | Creative Direction, Design & Development by Jerry Janquart'])
 
 <!DOCTYPE html>
 <html lang="en" class="">
