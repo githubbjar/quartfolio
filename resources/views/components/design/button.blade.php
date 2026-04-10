@@ -1,5 +1,5 @@
 <button
-  class="font-medium px-3 py-2 transition duration-150 ease-in-out flex items-center justify-center"
+  class="w-3/4 font-medium px-3 py-2 transition duration-150 ease-in-out flex items-center justify-center mx-auto"
   :class="{
     'bg-gray-700': category === '{{ $category }}',
     'bg-white hover:bg-gray-200': category !== '{{ $category }}'
