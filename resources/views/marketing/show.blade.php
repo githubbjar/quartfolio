@@ -89,7 +89,7 @@
 
         <div class="mx-auto lg:max-w-2xl px-4 pb-10">
             <p class="tinos-regular text-center text-2xl font-bold leading-tight">
-                {{ $project->description }}
+                {!! $project->description !!}
             </p>
 
             <div class="flex justify-center mt-12">

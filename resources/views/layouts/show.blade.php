@@ -61,7 +61,8 @@
 
         <div class="mx-auto lg:max-w-2xl px-4 pb-10">
             <p class="tinos-regular text-center text-2xl font-bold leading-tight">
-                {{ $project->description }}</p> 
+                {!! $project->description !!}
+            </p> 
                 
             <p class="text-center mt-5">
                 <a class="btn-sm text-white bg-black hover:bg-gray-500 rounded-none" href="{{ asset('pdfs/' . $project->slug . '.pdf') }}" target="_blank">View Spreads (PDF)</a>
