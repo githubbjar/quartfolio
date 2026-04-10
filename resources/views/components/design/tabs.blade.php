@@ -27,7 +27,7 @@
     <div x-data="{ category: '1' }">
 
             <!-- Category buttons -->
-            <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 mb-6">
+            <div class="flex flex-col items-center sm:flex-row sm:items-center justify-center gap-3 sm:gap-4 mb-6">
 
                 <x-design.button category="1">Covers</x-design.button>
                 <x-design.button category="2">Layouts</x-design.button>
