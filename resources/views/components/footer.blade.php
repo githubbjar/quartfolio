@@ -28,7 +28,7 @@
                     </a>
 
                     <div class="space-x-3">
-                        <a href="https://github.com/githubbjar" class="hover:underline">GitHub</a>
+                        <a href="https://github.com/jerryjanquart" class="hover:underline">GitHub</a>
                         <span></span>
                         <a href="https://www.linkedin.com/in/jerry-janquart-67aa608/" class="hover:underline">LinkedIn</a>
                     </div>
