@@ -23,8 +23,8 @@
                 
                 <div class="space-y-2 lg:flex lg:items-center lg:space-y-0 lg:space-x-4 lg:text-lg">
                     <h3 class="font-semibold uppercase">Connect</h3>
-                    <a href="mailto:jmjanquart@gmail.com" class="hover:underline">
-                        jmjanquart@gmail.com
+                    <a href="mailto:jerry@quartfolio.com" class="hover:underline">
+                        jerry@quartfolio.com
                     </a>
 
                     <div class="space-x-3">
