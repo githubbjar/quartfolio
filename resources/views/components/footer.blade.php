@@ -10,7 +10,7 @@
                 <strong>The online portfolio of Jerry Janquart</strong></p>
             </p>
             <p class="lg:w-3/5 text-md md:text-lg text-black mt-2 leading-5.5">
-                Creative Direction & Design Execution—Print & Web
+                Creative Direction, Design & Development—Print & Web
             </p>
             <p class="text-xs md:text-base mt-2 text-black">
                 Built with Laravel, Tailwind, Alpine, Vite
