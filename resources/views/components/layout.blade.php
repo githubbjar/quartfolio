@@ -12,6 +12,18 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    @if(app()->environment('production'))
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8DRXX5H3JY"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-8DRXX5H3JY');
+        </script>
+    @endif
+
     <!-- Open Graph (for LinkedIn, Slack, Facebook, etc) -->
     <meta property="og:title" content="{{ $title }}">
     <meta property="og:description" content="{{ $description ?? 'Design and development portfolio of Jerry Janquart.' }}">
