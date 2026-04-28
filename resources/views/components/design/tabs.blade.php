@@ -18,21 +18,21 @@
 
     <x-section.header>
         <x-section.title>Graphic Design</x-section.title>
-        <x-section.subtitle>Two decades in magazine and book publishing designing thoughtful visuals that serve the message. </x-section.subtitle>
+        <x-section.subtitle>Two decades in publishing—designing marketing, campaigns, and editorial materials that serve the message.</x-section.subtitle>
         <x-section.tools>InDesign · Photoshop · Illustrator · Word
         </x-section.tools>
     </x-section.header> 
 
     <!-- Section content -->
-    <div x-data="{ category: '1' }">
+    <div x-data="{ category: '3' }">
 
             <!-- Category buttons -->
             <div class="flex flex-col items-center sm:flex-row sm:items-center justify-center gap-3 sm:gap-4 mb-6">
 
-                <x-design.button category="1">Covers</x-design.button>
-                <x-design.button category="2">Layouts</x-design.button>
                 <x-design.button category="3">Marketing & Campaigns</x-design.button>
-                
+                <x-design.button category="2">Layouts</x-design.button>
+                <x-design.button category="1">Covers</x-design.button>
+
             </div>
             
             <div class="mx-auto lg:max-w-6xl md:max-w-5xl max-w-2xl px-10 lg:px-1">
