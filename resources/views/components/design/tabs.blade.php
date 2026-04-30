@@ -17,8 +17,8 @@
     @endif
 
     <x-section.header>
-        <x-section.title>Graphic Design</x-section.title>
-        <x-section.subtitle>Two decades in publishing—designing marketing, campaigns, and editorial materials that serve the message.</x-section.subtitle>
+        <x-section.title>Marketing & Campaigns</x-section.title>
+        <x-section.subtitle>Two decades in publishing—developing and executing marketing campaigns across print and digital.</x-section.subtitle>
         <x-section.tools>InDesign · Photoshop · Illustrator · Word
         </x-section.tools>
     </x-section.header> 
