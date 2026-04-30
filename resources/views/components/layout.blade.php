@@ -1,4 +1,4 @@
-@props(['title' => 'Quartfolio | Creative Direction, Design & Development by Jerry Janquart'])
+@props(['title' => 'Quartfolio | Campaigns, Content Systems & Execution by Jerry Janquart'])
 
 <!DOCTYPE html>
 <html lang="en" class="">
@@ -8,7 +8,7 @@
 
     <title>{{ $title }}</title>
 
-    <meta name="description" content="{{ $description ?? 'Design and development portfolio of Jerry Janquart featuring editorial layouts, magazine covers, and web projects.' }}">
+    <meta name="description" content="{{ $description ?? 'Campaigns, Content Systems & Execution featuring editorial layouts, magazine covers, and web projects.' }}">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -26,7 +26,7 @@
 
     <!-- Open Graph (for LinkedIn, Slack, Facebook, etc) -->
     <meta property="og:title" content="{{ $title }}">
-    <meta property="og:description" content="{{ $description ?? 'Design and development portfolio of Jerry Janquart.' }}">
+    <meta property="og:description" content="{{ $description ?? 'Campaigns, Content Systems & Execution.' }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:image" content="{{ asset('images/og-image.jpg') }}">
@@ -34,7 +34,7 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ $title }}">
-    <meta name="twitter:description" content="{{ $description ?? 'Design and development portfolio of Jerry Janquart.' }}">
+    <meta name="twitter:description" content="{{ $description ?? 'Campaigns, Content Systems & Execution.' }}">
     <meta name="twitter:image" content="{{ asset('images/og-image.jpg') }}">
 
     <link rel="icon" href="/favicon.ico" sizes="any">
