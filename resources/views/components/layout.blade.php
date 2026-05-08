@@ -110,9 +110,10 @@
                                 x-transition
                                 class="absolute right-0 mt-2 w-48 bg-white shadow-lg border border-gray-200"
                             >
+
                                 <a class="block px-5 py-2 hover:bg-gray-100"
-                                href="{{ route('covers.index') }}">
-                                    -> Covers
+                                href="{{ route('marketing.index') }}">
+                                    -> Marketing & Campaigns
                                 </a>
 
                                 <a class="block px-5 py-2 hover:bg-gray-100"
@@ -121,14 +122,10 @@
                                 </a>
 
                                 <a class="block px-5 py-2 hover:bg-gray-100"
-                                href="{{ route('marketing.index') }}">
-                                    -> Marketing & Camplaings
+                                href="{{ route('covers.index') }}">
+                                    -> Covers
                                 </a>
 
-                                <a class="block px-5 py-2 hover:bg-gray-100"
-                                href="{{ route('conceptual-covers.index') }}">
-                                    -> Conceptual Cover
-                                </a>
                             </div>
                         </li>
                         <li>
@@ -253,16 +250,13 @@
                                     <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="#design">/ Graphic Design</a>
                                 </li>
                                 <li class="ml-4">
-                                    <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('covers.index') }}">-> Covers</a>
+                                    <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('marketing.index') }}">-> Marketing & Campaigns</a>
                                 </li>
                                 <li class="ml-4">
                                     <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('layouts.index') }}">-> Layouts</a>
                                 </li>
-                                 <li class="ml-4">
-                                    <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('marketing.index') }}">-> Marketing & Campaigns</a>
-                                </li>
                                 <li class="ml-4">
-                                    <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('conceptual-covers.index') }}">-> Conceptual Cover</a>
+                                    <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="{{ route('covers.index') }}">-> Covers</a>
                                 </li>
                                 <li>
                                     <a class="flex text-black hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100 py-2" href="#development">/ Web Development</a>

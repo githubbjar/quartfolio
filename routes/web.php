@@ -33,10 +33,10 @@ Route::controller(ProjectController::class)->group(function () {
         ->name('eblasts.show');
 
     // Conceptual Covers Section
-    Route::get('/conceptual-covers', 'conceptualCoversIndex')
+    /*Route::get('/conceptual-covers', 'conceptualCoversIndex')
         ->name('conceptual-covers.index');
     Route::get('/conceptual-covers/{project:slug}', 'conceptualCoversShow')
-        ->name('conceptual-covers.show');
+        ->name('conceptual-covers.show')*/
 
     // Marketing and Campaign Designs Section
     Route::get('/marketing-and-campaigns', 'marketingIndex')

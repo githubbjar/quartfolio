@@ -51,8 +51,8 @@
                     <option value="layout">Layout</option>
                     <option value="website">Website</option>
                     <option value="eblast">Eblast</option>
-                    <option value="concept">Conceptual Cover</option>
-                    <option value="marketing">Marketing & Campaign Design</option>
+                    <!--<option value="concept">Conceptual Cover</option>-->
+                    <option value="marketing">Marketing & Campaign</option>
 
                 </select>
             </div>
