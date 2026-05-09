@@ -7,7 +7,7 @@
             <img 
                 src="{{ asset('images/jerry-janquart-headshot.webp') }}" 
                 alt="Jerry Janquart"
-                class="float-right ml-8 mb-6 md:w-80 lg:w-108 mt-10 rotate-1"
+                class="float-right ml-8 mb-6 md:w-80 mt-10 rotate-1 mr-16"
             >
         </div>
 
@@ -21,19 +21,21 @@
 
         <x-section.header>
 
-                <p class="text-center text-md uppercase tracking-widest text-gray-700">
-                    About
-                </p>
+                <div class="lg:ml-24">
+                    <p class="text-center text-md uppercase tracking-widest text-gray-700">
+                        About
+                    </p>
 
-                <div class="">
-                    <h2 class="tinos-regular h2 mb-4 uppercase leading-none pt-4">Jerry <br />Janquart</h2>
+                    <div class="">
+                        <h2 class="tinos-regular h2 mb-4 uppercase leading-none pt-4">Jerry Janquart</h2>
+                    </div>
+
+                    <p class="tinos-regular text-center text-2xl font-bold leading-tight">
+                        <span class="bg-yellow-100 px-3 py-1 inline-block rotate: -1deg">
+                            Creative Production Specialist
+                        </span>
+                    </p>
                 </div>
-
-                <p class="tinos-regular text-center text-2xl font-bold leading-tight">
-    <span class="bg-yellow-100 px-3 py-1 inline-block rotate: -1deg">
-        Creative Production Specialist
-    </span>
-</p>
 
                 <div class="flex justify-center mt-10 mb-4">
                 <div
